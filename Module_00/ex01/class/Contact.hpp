@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:23:24 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/04 18:19:55 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/10/04 18:46:02 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ class Contact {
 		std::string _nickname;
 		std::string _phoneNumber;
 		std::string _darkestSecret;
+
+		void	setFirstName(std::string firstName);
+		void	setLastName(std::string lastName);
+		void	setNickname(std::string nickname);
+		void	setPhoneNumber(std::string phoneNumber);
+		void	setDarkestSecret(std::string darkestSecret);
 };
 
 #endif
