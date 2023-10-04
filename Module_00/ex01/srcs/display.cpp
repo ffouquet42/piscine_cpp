@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:53:37 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/04 16:03:28 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/10/04 16:36:41 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,14 @@
 
 void	display_welcome()
 {
-	std::cout << "Hello" << std::endl;
+	std::cout << MAGENTA << "\n\n\nHELLO, WELCOME IN YOUR PHONE BOOK !\n" << WHITE << std::endl;
 }
 
 void	display_menu()
 {
-	
+	std::cout << MAGENTA << "What do you want to do?\n" << WHITE << std::endl;
+	std::cout << GREEN << "ADD" << WHITE << " - Create a new contact\n" << std::endl;
+	std::cout << BLUE << "SEARCH" << WHITE << " - Research a contact\n" << std::endl;
+	std::cout << RED << "EXIT" << WHITE << " - Quit the phone book\n" << std::endl;
+	std::cout << CYAN << "> " << WHITE;
 }

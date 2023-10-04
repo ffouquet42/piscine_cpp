@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:36:08 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/04 16:03:05 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/10/04 16:15:21 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,21 @@
 # include "../class/Contact.hpp"
 # include "../class/PhoneBook.hpp"
 
-//--------------- display.cpp ---------------//
+//---------------   display.cpp   ---------------//
 void	display_welcome();
 void	display_menu();
 
-//--------------- main.cpp ---------------//
+//---------------   main.cpp   ---------------//
 int		main(int argc, char **argv);
+
+
+//---------------   colors   ---------------//
+# define RED "\x1B[31m"
+# define GREEN "\x1B[32m"
+# define YELLOW "\x1B[33m"
+# define BLUE "\x1B[34m"
+# define MAGENTA "\x1B[35m"
+# define CYAN "\x1B[36m"
+# define WHITE "\x1B[0m"
 
 #endif
