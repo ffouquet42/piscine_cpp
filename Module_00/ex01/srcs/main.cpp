@@ -6,31 +6,29 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:47:35 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/04 16:48:50 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/10/04 17:35:19 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/program.hpp"
 
-int	main(int argc, char **argv) // void
+int	main(void)
 {
-	int exit = 0; // ?
 	std::string user_input;
+	PhoneBook	phonebook;
 	
 	display_welcome();
-	while (!exit)
+	while (1)
 	{
 		display_menu();
 		std::cin >> user_input;
 		std::cout << std::endl << std::endl;
-		if (user_input == "add" || user_input == "ADD") // supp minuscule
-		;
-		else if (user_input == "search" || user_input == "SEARCH") //
-		;
-		else if (user_input == "exit" || user_input == "EXIT") //
+		if (user_input == "ADD")
+			phonebook.addContact();
+		else if (user_input == "SEARCH")
+			phonebook.searchContact();
+		else if (user_input == "EXIT")
 			break;
-		else
-			std::cout << MAGENTA << "/!\\ INVALID CHOICE /!\\" << WHITE << std::endl;
 	}
 	return (0);
 }

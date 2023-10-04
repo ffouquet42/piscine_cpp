@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:36:08 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/04 16:15:21 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/10/04 17:20:25 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	display_welcome();
 void	display_menu();
 
 //---------------   main.cpp   ---------------//
-int		main(int argc, char **argv);
+int		main(void);
 
 
 //---------------   colors   ---------------//
