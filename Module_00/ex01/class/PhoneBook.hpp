@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:14:33 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/04 17:39:19 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/10/05 15:02:13 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class PhoneBook {
 	private:
 		Contact _contacts[8];
 		int		_number_of_contacts;
+		int		_contact_to_delete;
 };
 
 #endif
