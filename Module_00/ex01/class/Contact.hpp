@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:23:24 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/04 18:46:02 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/10/05 14:48:22 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ class Contact {
 		~Contact();
 		
 		void createNewContact();
+		void showMinInfos();
+		void showFullInfos();
 		
 	private:
 		std::string _firstName;
