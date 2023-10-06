@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:28:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/05 14:50:19 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/10/06 11:52:46 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,14 @@ void	Contact::showMinInfos()
 	std::cout << YELLOW << std::setw(10) << cutSizeMax(_nickname) << "|" << WHITE << std::endl;
 }
 
-void	Contact::showFullInfos()
+void	Contact::showFullInfos(int index)
 {
-	
+	std::cout << YELLOW << "index : " << index << std::endl;
+	std::cout << "first name : " << _firstName << std::endl;
+	std::cout << "last name : " << _lastName << std::endl;
+	std::cout << "nickname : " << _nickname << std::endl;
+	std::cout << "phone number : " << _phoneNumber << std::endl;
+	std::cout << "darkest secret : " << _darkestSecret << WHITE << std::endl;
 }
 
 // private

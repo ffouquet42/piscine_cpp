@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:28:22 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/06 11:46:25 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/10/06 11:50:46 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,5 @@ void PhoneBook::searchContact()
 		std::cin >> user_input;
 		index = valid_index(user_input);
 	}
+	_contacts[index].showFullInfos(index);
 }
