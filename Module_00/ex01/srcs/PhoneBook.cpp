@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:28:22 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/05 15:04:46 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/10/06 11:46:25 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,19 @@ void PhoneBook::addContact()
 		_contacts[_number_of_contacts].createNewContact();
 		_number_of_contacts++;
 	}
-	else
+	else if (_number_of_contacts == 8)
 	{
-		//	
+		_contacts[_contact_to_delete].createNewContact();
+		_contact_to_delete++;
+		_contact_to_delete = (_contact_to_delete == 8) ? 0 : _contact_to_delete;
 	}
 }
 
 void PhoneBook::searchContact()
 {
+	std::string user_input;
+	int index = -1;
+	
 	if (_number_of_contacts == 0)
 	{
 		std::cout << MAGENTA << "Phonebook is empty" << std::endl;
@@ -46,5 +51,11 @@ void PhoneBook::searchContact()
 			_contacts[i].showMinInfos();
 		}
 	}
-	// choisir contact a afficher => l 'afficher
+	while (index < 0 || index > _number_of_contacts - 1)
+	{
+		std::cout << MAGENTA << "Enter the index of the contact to display" << std::endl;
+		std::cout << CYAN << "> " << WHITE;
+		std::cin >> user_input;
+		index = valid_index(user_input);
+	}
 }

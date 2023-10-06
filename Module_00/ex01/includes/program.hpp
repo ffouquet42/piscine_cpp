@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:36:08 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/05 14:56:01 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/10/06 11:45:45 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <iostream>
 # include <string>
 # include <iomanip>
+# include <cstring>
 
 # include "../class/Contact.hpp"
 # include "../class/PhoneBook.hpp"
@@ -27,6 +28,10 @@ void	display_contacts_list_hud();
 
 //---------------   main.cpp   ---------------//
 int		main(void);
+
+//---------------   search.cpp   ---------------//
+int		only_digit(std::string str);
+int		valid_index(std::string str);
 
 
 //---------------   colors   ---------------//
