@@ -1,4 +1,4 @@
-SRCS		=	megaphone.cpp
+SRCS		=	srcs/megaphone.cpp
 
 OBJS		=	$(SRCS:.cpp=.o)
 

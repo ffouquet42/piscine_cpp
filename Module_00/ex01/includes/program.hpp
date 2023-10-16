@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:36:08 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/06 11:45:45 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/10/16 15:04:27 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <iomanip>
 # include <cstring>
 
-# include "../class/Contact.hpp"
-# include "../class/PhoneBook.hpp"
+# include "../includes/Contact.hpp"
+# include "../includes/PhoneBook.hpp"
 
 //---------------   display.cpp   ---------------//
 void	display_welcome();
