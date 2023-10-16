@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 15:40:26 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/16 15:52:04 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/10/16 16:31:48 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,31 @@
 int	main(void)
 {
 	Zombie *bob = newZombie("Bob");
+	bob->announce();
 	delete bob;
+
+	std::cout << std::endl;
 
 	Zombie *bill = newZombie("Bill");
 	delete bill;
 	
-	Zombie *jhon = newZombie("Jhon");
+	std::cout << std::endl;
+
+	Zombie *john = newZombie("John");
 	Zombie *peter = newZombie("Peter");
-	delete jhon;
+	peter->announce();
+	john->announce();
+	delete john;
 	delete peter;
+
+	std::cout << std::endl;
+
+	delete newZombie("Parker");
+
+	std::cout << std::endl;
+
+	randomChump("Bobby");
+	randomChump("Johnny");
 
 	return (0);
 }
