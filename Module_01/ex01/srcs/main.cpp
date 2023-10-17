@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 17:03:44 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/17 19:09:09 by fllanet          ###   ########.fr       */
+/*   Created: 2023/10/17 17:28:32 by fllanet           #+#    #+#             */
+/*   Updated: 2023/10/17 19:19:53 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Zombie.hpp"
 
-Zombie::Zombie()
+int	main(void)
 {
-	std::cout << GREEN << "Zombie created." << WHITE << std::endl;
-}
-
-Zombie::~Zombie()
-{
-	std::cout << RED << "Zombie deleted." << WHITE << std::endl;
-}
-
-void	Zombie::setName(std::string name)
-{
-	this->name = name;
-}
-
-void	Zombie::announce(void)
-{
-	std::cout << YELLOW << this->name << ": BraiiiiiiinnnzzzZ..." << WHITE << std::endl;
+	std::string	name = "Bob";
+	int			N = 3;
+	Zombie		*horde = zombieHorde(N, name);
+	
+	for (int i = 0; i < N; i++)
+		horde[i].announce();
+	return (delete[] horde, 0);
 }
