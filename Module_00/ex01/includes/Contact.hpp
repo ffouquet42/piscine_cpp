@@ -6,12 +6,11 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:23:24 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/06 11:51:02 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/11/15 15:45:59 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
+#pragma once
 
 # include "../includes/program.hpp"
 
@@ -37,5 +36,3 @@ class Contact {
 		void	setPhoneNumber(std::string phoneNumber);
 		void	setDarkestSecret(std::string darkestSecret);
 };
-
-#endif

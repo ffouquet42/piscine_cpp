@@ -6,13 +6,13 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:36:08 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/16 15:04:27 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/11/15 15:47:53 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PROGRAM_HPP
-# define PROGRAM_HPP
+#pragma once
 
+//---------------   includes   ---------------//
 # include <iostream>
 # include <string>
 # include <iomanip>
@@ -20,6 +20,9 @@
 
 # include "../includes/Contact.hpp"
 # include "../includes/PhoneBook.hpp"
+
+
+//===============   PROTOTYPES   ===============//
 
 //---------------   display.cpp   ---------------//
 void	display_welcome();
@@ -42,5 +45,3 @@ int		valid_index(std::string str);
 # define MAGENTA "\x1B[35m"
 # define CYAN "\x1B[36m"
 # define WHITE "\x1B[0m"
-
-#endif
