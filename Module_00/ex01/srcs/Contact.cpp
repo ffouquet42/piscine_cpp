@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:28:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/11/16 15:51:07 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/11/16 16:42:47 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,6 @@ void	Contact::createNewContact()
 
 std::string	cutSizeMax(std::string str)
 {
-	// if (str.length() > 10)
-	// 	return (str.substr(0, 9) + ".");
-	// return (str);
-	
 	return (str.length() > 10) ? str.substr(0, 9) + "." : str;
 }
 
