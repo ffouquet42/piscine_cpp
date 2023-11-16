@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:28:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/11/15 16:07:01 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/11/16 15:51:07 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,23 +24,23 @@ void	Contact::createNewContact()
 	std::cout << MAGENTA << "Create a new contact !" << WHITE << std::endl;
 
 	std::cout << CYAN << "First name > " << WHITE;
-	std::cin >> user_input;
+	std::getline(std::cin, user_input);
 	setFirstName(user_input);
 
 	std::cout << CYAN << "Last name > " << WHITE;
-	std::cin >> user_input;
+	std::getline(std::cin, user_input);
 	setLastName(user_input);
 
 	std::cout << CYAN << "Nickname > " << WHITE;
-	std::cin >> user_input;
+	std::getline(std::cin, user_input);
 	setNickname(user_input);
 
 	std::cout << CYAN << "Phone number > " << WHITE;
-	std::cin >> user_input;
+	std::getline(std::cin, user_input);
 	setPhoneNumber(user_input);
 
 	std::cout << CYAN << "Darkest secret > " << WHITE;
-	std::cin >> user_input;
+	std::getline(std::cin, user_input);
 	setDarkestSecret(user_input);
 }
 
