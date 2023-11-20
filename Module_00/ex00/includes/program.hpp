@@ -6,13 +6,13 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:31:16 by fllanet           #+#    #+#             */
-/*   Updated: 2023/11/20 07:36:26 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/11/20 07:38:39 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-//---------------   Includes   ---------------//
+//---------------   includes   ---------------//
 # include <iostream>
 
 # include "../includes/colors.hpp"
