@@ -1,5 +1,5 @@
-SRCS		=	Account.cpp		\
-				tests.cpp		\
+SRCS		=	srcs/Account.cpp	\
+				srcs/tests.cpp		\
 
 OBJS		=	$(SRCS:.cpp=.o)
 
