@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 18:16:56 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/16 15:05:34 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/11/20 07:29:47 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ Account::Account(int initial_deposit)
 	_nbAccounts++;
 	_amount = initial_deposit;
 	_totalAmount = _totalAmount + _amount;
-	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";created\n";
+	std::cout << COLOR_ROYAL_BLUE << "index:" << _accountIndex << ";amount:" << _amount << ";created\n" << COLOR_WHITE;
 }
 
 Account::~Account(void)
 {
 	_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";closed\n";
+	std::cout << COLOR_MEDIUM_PURPLE << "index:" << _accountIndex << ";amount:" << _amount << ";closed\n" << COLOR_WHITE;
 }
 
 void Account::_displayTimestamp(void)
@@ -42,7 +42,7 @@ void Account::_displayTimestamp(void)
 
 	std::time(&local_time);
 	std::strftime(timestamp, 19, "[%Y%m%d_%H%M%S] ", localtime(&local_time));
-	std::cout << timestamp;
+	std::cout << COLOR_YELLOW << timestamp << COLOR_WHITE;
 }
 
 int	Account::getNbAccounts(void)
@@ -68,7 +68,7 @@ int	Account::getNbWithdrawals(void)
 void Account::displayAccountsInfos(void)
 {
 	_displayTimestamp();
-	std::cout << "account:" << _nbAccounts << ";total:" << _totalAmount << ";deposits:" << _totalNbDeposits << ";withdrawal:" << _totalNbWithdrawals << std::endl;
+	std::cout << COLOR_SKY_BLUE << "account:" << _nbAccounts << ";total:" << _totalAmount << ";deposits:" << _totalNbDeposits << ";withdrawal:" << _totalNbWithdrawals << COLOR_WHITE << std::endl;
 }
 
 void Account::makeDeposit(int deposit)
@@ -77,26 +77,26 @@ void Account::makeDeposit(int deposit)
 	_nbDeposits++;
 	_totalNbDeposits++;
 	_totalAmount = _totalAmount + deposit;
-	std::cout << "index:" << _accountIndex << ";p_amount:" << _amount;
+	std::cout << COLOR_GREEN << "index:" << _accountIndex << ";p_amount:" << _amount << COLOR_WHITE;
 	_amount = _amount + deposit;
-	std::cout << ";deposit:" << deposit << ";amount:" << _amount << ";nb_deposit:" << _nbDeposits << std::endl;
+	std::cout << COLOR_FOREST_GREEN << ";deposit:" << deposit << ";amount:" << _amount << ";nb_deposit:" << _nbDeposits << COLOR_WHITE << std::endl;
 }
 
 bool Account::makeWithdrawal(int withdrawal)
 {
 	_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";p_amount:" << _amount << ";withdrawal:";
+	std::cout << COLOR_BRIGHT_RED << "index:" << _accountIndex << ";p_amount:" << _amount << ";withdrawal:" << COLOR_WHITE;
 	if (withdrawal <= _amount)
 	{
 		_nbWithdrawals++;
 		_totalNbWithdrawals++;
 		_amount = _amount - withdrawal;
 		_totalAmount = _totalAmount - withdrawal;
-		std::cout << withdrawal << ";amount:" << _amount << ";nb_withdrawals:" << _nbWithdrawals << std::endl;
+		std::cout << COLOR_BRIGHT_RED << withdrawal << ";amount:" << _amount << ";nb_withdrawals:" << _nbWithdrawals << COLOR_WHITE << std::endl;
 		return (1);
 	}
 	else
-		std::cout << "refused" << std::endl;
+		std::cout << COLOR_BRIGHT_RED << "refused" << COLOR_WHITE << std::endl;
 	return (0);
 }
 
@@ -108,5 +108,5 @@ int Account::checkAmount(void) const
 void Account::displayStatus(void) const
 {
 	_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";deposit:" << _nbDeposits << ";withdrawals:" << _nbWithdrawals << std::endl;
+	std::cout << COLOR_CYAN << "index:" << _accountIndex << ";amount:" << _amount << ";deposit:" << _nbDeposits << ";withdrawals:" << _nbWithdrawals << COLOR_WHITE << std::endl;
 }
