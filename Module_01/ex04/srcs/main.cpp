@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 14:35:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/19 15:28:03 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/11/22 15:07:30 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,17 @@ int	replace_text(char **argv)
 		std::cout << RED << "Can't create <" << filename << ".replace>." << WHITE << std::endl;
 		return (1);
 	}
-	
-	//
-	
+    std::string line;
+    while (std::getline(in_file, line))
+	{
+        std::string::size_type pos = 0;
+        while ((pos = line.find(s1, pos)) != std::string::npos)
+		{
+            line.replace(pos, s1.length(), s2);
+            pos += s2.length();
+        }
+        out_file << line << '\n';
+    }
 	std::cout << GREEN << "A new file <" << filename << ".replace> was created with modifications." << WHITE << std::endl;
 	return (0);
 }
