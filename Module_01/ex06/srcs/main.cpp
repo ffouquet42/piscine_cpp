@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 06:05:58 by fllanet           #+#    #+#             */
-/*   Updated: 2023/11/26 06:36:37 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/11/26 06:40:42 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	main(int argc, char **argv)
 	
 	if (argc == 2)
 	{
-		
 		while (i < 4)
 		{
 			if (argv[1] == level_array[i])
