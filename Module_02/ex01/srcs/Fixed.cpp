@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:46:54 by fllanet           #+#    #+#             */
-/*   Updated: 2023/11/27 13:16:58 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/11/27 15:20:12 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ int		Fixed::toInt(void) const { return _value >> _bits; }
 
 float	Fixed::toFloat(void) const { return static_cast<float>(_value) / (1 << _bits); }
 
-std::ostream &operator<<(std::ostream &os, const Fixed &cpy) { return (os << cpy.toFloat()); }
+std::ostream &operator<<(std::ostream &stream, const Fixed &fixed) { return (stream << fixed.toFloat()); }
 // *****   NEW   *****

@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:46:49 by fllanet           #+#    #+#             */
-/*   Updated: 2023/11/27 13:13:37 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/11/27 15:20:23 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ class Fixed
 };
 
 // *****   NEW   *****
-std::ostream &operator<<(std::ostream &os, const Fixed &cpy);
+std::ostream &operator<<(std::ostream &stream, const Fixed &fixed);
 
 //---------------   colors   ---------------//
 # define RED		"\x1B[31m"
