@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 09:26:11 by fllanet           #+#    #+#             */
-/*   Updated: 2023/11/29 10:56:50 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/11/30 14:21:49 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,23 @@
 
 ClapTrap::ClapTrap() : _name("No Name"), _hit_points(10), _energy(10), _attack_damage(0)
 {
-	std::cout << GREEN << "Constructor called" << WHITE << std::endl;
+	std::cout << GREEN << "ClapTrap : Constructor called" << WHITE << std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << RED << "Destructor called" << WHITE << std::endl; 
+	std::cout << RED << "ClapTrap : Destructor called" << WHITE << std::endl; 
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hit_points(10), _energy(10), _attack_damage(0)
 {
-	std::cout << GREEN << "Constructor called" << WHITE << std::endl;
+	std::cout << GREEN << "ClapTrap : Constructor called" << WHITE << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &cpy)
 {
 	*this = cpy;
-	std::cout << GREEN << "Constructor called" << WHITE << std::endl;
+	std::cout << GREEN << "ClapTrap : Constructor called" << WHITE << std::endl;
 }
 
 ClapTrap	&ClapTrap::operator=(const ClapTrap &cpy)
@@ -41,7 +41,7 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &cpy)
 	_hit_points = cpy._hit_points;
 	_energy = cpy._energy;
 	_attack_damage = cpy._attack_damage;
-	std::cout << GREEN << "Constructor called" << WHITE << std::endl;
+	std::cout << GREEN << "ClapTrap : Constructor called" << WHITE << std::endl;
 	return (*this);
 }
 
