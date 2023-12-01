@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 11:12:55 by fllanet           #+#    #+#             */
-/*   Updated: 2023/11/30 14:48:18 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/01 11:56:53 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	ScavTrap::attack(const std::string &target)
 		std::cout << ORANGE << _name << " : Not enough Energy for attack." << WHITE << std::endl;
 	else
 	{
-		std::cout << BLUE << "ScavTrap " << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage!" << WHITE << std::endl;
+		std::cout << BLUE << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage!" << WHITE << std::endl;
 		_energy--;
 	}
 }
@@ -80,5 +80,5 @@ void	ScavTrap::guardGate()
 	// 	_energy--;
 	// }
 
-	std::cout << MAGENTA << "ScavTrap : is now in Gate keeper mode!" << WHITE << std::endl;
+	std::cout << MAGENTA << "Is now in Gate keeper mode!" << WHITE << std::endl;
 }

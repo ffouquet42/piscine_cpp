@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 09:13:26 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/01 09:21:02 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/01 11:10:35 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "ClapTrap.hpp"
 
 //---------------   class   ---------------//
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 	public:
 		FragTrap();

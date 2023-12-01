@@ -10,7 +10,7 @@ CC			=	c++
 
 RM			=	rm -f
 
-FLAGS		=	-Wall -Werror -Wextra -std=c++98
+FLAGS		=	-Wall -Werror -Wextra -std=c++98 #-Wshadow -Wno-shadow
 
 NAME		=	diamondtrap
 

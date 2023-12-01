@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 09:13:30 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/01 09:34:35 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/01 11:57:09 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,5 @@ void	FragTrap::highFivesGuys()
 	// 	_energy--;
 	// }
 	
-	std::cout << MAGENTA << "FragTrap : *High Fives Guys*" << WHITE << std::endl;
+	std::cout << MAGENTA << "*High Fives Guys*" << WHITE << std::endl;
 }
