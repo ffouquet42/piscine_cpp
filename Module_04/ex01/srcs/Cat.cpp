@@ -6,24 +6,26 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:25:06 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/04 13:38:39 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/04 16:24:11 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Cat.hpp"
 
-Cat::Cat()
+Cat::Cat() : Animal()
 {
 	std::cout << GREEN << "Cat : Constructor called" << WHITE << std::endl;
 	_type = "Cat";
+	_brain = new Brain();
 }
 
 Cat::~Cat()
 {
 	std::cout << RED << "Cat : Destructor called" << WHITE << std::endl;
+	delete _brain;
 }
 
-Cat::Cat(const Cat &cpy)
+Cat::Cat(const Cat &cpy) : Animal(cpy)
 {
 	std::cout << GREEN << "Cat : Constructor called" << WHITE << std::endl;
 	*this = cpy;
@@ -33,6 +35,7 @@ Cat &Cat::operator=(const Cat &cpy)
 {
 	std::cout << GREEN << "Cat : Constructor called" << WHITE << std::endl;
 	this->_type = cpy._type;
+	this->_brain = new Brain(*cpy._brain);
 	return (*this);
 }
 

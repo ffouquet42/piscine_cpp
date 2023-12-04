@@ -4,6 +4,7 @@ SRCS		=	srcs/main.cpp			\
 				srcs/Dog.cpp			\
 				srcs/WrongAnimal.cpp	\
 				srcs/WrongCat.cpp		\
+				srcs/Brain.cpp			\
 
 OBJS		=	$(SRCS:.cpp=.o)
 
@@ -13,7 +14,7 @@ RM			=	rm -f
 
 FLAGS		=	-Wall -Werror -Wextra -std=c++98
 
-NAME		=	animal
+NAME		=	brain
 
 all:		$(NAME)
 

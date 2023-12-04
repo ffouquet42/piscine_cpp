@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:25:12 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/04 14:24:39 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/04 16:42:30 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,32 @@
 #include "../includes/Cat.hpp"
 #include "../includes/WrongAnimal.hpp"
 #include "../includes/WrongCat.hpp"
+#include "../includes/Brain.hpp"
 
 int main()
-{	
-	const Animal* meta = new Animal();
+{
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	j->makeSound();
-	meta->makeSound();
-	delete meta, delete j, delete i;
+	delete j;
+	delete i;
 	
 	std::cout << std::endl;
 
-	const WrongAnimal *wrongAnimal = new WrongAnimal();
-	const WrongCat *wrongCat = new WrongCat();
-	std::cout << wrongAnimal->getType() << " " << std::endl;
-	std::cout << wrongCat->getType() << " " << std::endl;
-	wrongAnimal->makeSound();
-	wrongCat->makeSound();
-	delete wrongAnimal, delete wrongCat;
+	Animal* animals[100];
+
+	for (int i = 0; i < 100; i++)
+	{
+		if (i < 50)
+			animals[i] = new Cat();
+		else
+			animals[i] = new Dog();
+	}
 	
+	for (int i = 0; i < 100; i++)
+		animals[i]->makeSound();
+	
+	for (int i = 0; i < 100; i++)
+		delete animals[i];
+
 	return (0);
 }

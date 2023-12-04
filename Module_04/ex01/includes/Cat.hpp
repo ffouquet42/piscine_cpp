@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:24:54 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/04 13:51:37 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/04 16:20:06 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 //---------------   includes   ---------------//
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 //---------------   class   ---------------//
 class Cat : public Animal
@@ -25,4 +26,7 @@ class Cat : public Animal
 		Cat &operator=(const Cat &cpy);
 
 		void	makeSound() const;
+
+	private:
+		Brain *_brain;
 };
