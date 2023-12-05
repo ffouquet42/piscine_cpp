@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 11:53:25 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/05 12:04:51 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/05 12:12:11 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ void	Character::equip(AMateria *m)
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (inventory[i] == NULL)
+		if (_inventory[i] == NULL)
 		{
-			inventory[i] = m;
+			_inventory[i] = m;
 			break ;
 		}
 	}
@@ -49,21 +49,21 @@ void	Character::equip(AMateria *m)
 void	Character::unequip(int idx)
 {
 	if (idx >= 0 && idx < 4)
-		inventory[idx] = NULL;
+		_inventory[idx] = NULL;
 }
 
 void	Character::use(int idx, ICharacter &target)
 {
-	if (idx >= 0 && idx < 4 && inventory[idx] != NULL)
-		inventory[idx]->use(target); // unequip ?
+	if (idx >= 0 && idx < 4 && _inventory[idx] != NULL)
+		_inventory[idx]->use(target); // unequip ?
 }
 
 void	Character::clearInventory()
 {
 	for (int i = 0; i < 4; i++)
 	{
-		delete (inventory[i]);
-		inventory[i] = NULL;
+		delete (_inventory[i]);
+		_inventory[i] = NULL;
 	}
 }
 
@@ -73,10 +73,10 @@ void	Character::copyInventory(const Character &cpy)
 	{
 		for (int i = 0; i < 4; i++)
 		{
-			if (cpy.inventory[i] != NULL)
-				inventory[i] = cpy.inventory[i]->clone();
+			if (cpy._inventory[i] != NULL)
+				_inventory[i] = cpy._inventory[i]->clone();
 			else
-				inventory[i] = NULL;
+				_inventory[i] = NULL;
 		}
 	}
 }

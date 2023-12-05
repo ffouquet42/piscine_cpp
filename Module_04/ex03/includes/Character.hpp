@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 11:45:06 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/05 11:57:24 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/05 12:11:09 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Character : public ICharacter
 		Character &operator=(const Character &cpy);
 		
 		std::string const	&getName() const; // 2 const (dans sujet) mais pk ?
-		void				equip(AMateria *m)
+		void				equip(AMateria *m);
 		void				unequip(int idx);
 		void				use(int idx, ICharacter &target);
 
