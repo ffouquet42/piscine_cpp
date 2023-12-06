@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:28:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/06 10:51:49 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/06 12:45:05 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,29 +19,48 @@ Contact::~Contact() {}
 
 void	Contact::createNewContact()
 {
-	std::string user_input;
+	std::string user_firstname;
+	std::string user_lastname;
+	std::string user_nickname;
+	std::string user_phonenumber;
+	std::string user_darkestsecret;
 	
 	std::cout << MAGENTA << "Create a new contact !" << WHITE << std::endl;
 
-	std::cout << CYAN << "First name > " << WHITE;
-	std::getline(std::cin, user_input);
-	setFirstName(user_input);
+	while (user_firstname.empty())
+	{
+		std::cout << CYAN << "First name > " << WHITE;
+		std::getline(std::cin, user_firstname);
+		setFirstName(user_firstname);
+	}
 
-	std::cout << CYAN << "Last name > " << WHITE;
-	std::getline(std::cin, user_input);
-	setLastName(user_input);
-
-	std::cout << CYAN << "Nickname > " << WHITE;
-	std::getline(std::cin, user_input);
-	setNickname(user_input);
-
-	std::cout << CYAN << "Phone number > " << WHITE;
-	std::getline(std::cin, user_input);
-	setPhoneNumber(user_input);
-
-	std::cout << CYAN << "Darkest secret > " << WHITE;
-	std::getline(std::cin, user_input);
-	setDarkestSecret(user_input);
+	while (user_lastname.empty())
+	{
+		std::cout << CYAN << "Last name > " << WHITE;
+		std::getline(std::cin, user_lastname);
+		setLastName(user_lastname);
+	}
+	
+	while (user_nickname.empty())
+	{
+		std::cout << CYAN << "Nickname > " << WHITE;
+		std::getline(std::cin, user_nickname);
+		setNickname(user_nickname);
+	}
+	
+	while (user_phonenumber.empty())
+	{
+		std::cout << CYAN << "Phone number > " << WHITE;
+		std::getline(std::cin, user_phonenumber);
+		setPhoneNumber(user_phonenumber);
+	}
+	
+	while (user_darkestsecret.empty())
+	{
+		std::cout << CYAN << "Darkest secret > " << WHITE;
+		std::getline(std::cin, user_darkestsecret);
+		setDarkestSecret(user_darkestsecret);
+	}
 }
 
 std::string	cutSizeMax(std::string str)
