@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 03:44:45 by fllanet           #+#    #+#             */
-/*   Updated: 2023/11/26 04:45:07 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/06 15:57:35 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void Harl::complain(std::string level)
 	int i = 0;
 	
 	std::string level_array[4] = { "DEBUG", "INFO", "WARNING", "ERROR" };
-	void (Harl::*f[4])() = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error }; // tableau pointeurs de fonctions
+	void (Harl::*f[4])() = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
 
 	while (i < 4)
 	{
