@@ -6,11 +6,11 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:28:22 by fllanet           #+#    #+#             */
-/*   Updated: 2023/11/16 15:50:26 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/06 11:18:07 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/program.hpp"
+#include "../includes/PhoneBook.hpp"
 
 PhoneBook::PhoneBook() : _number_of_contacts(0), _contact_to_delete(0) {}
 PhoneBook::~PhoneBook() {}
@@ -44,7 +44,10 @@ void PhoneBook::searchContact()
 	}
 	else if (_number_of_contacts > 0 && _number_of_contacts <= 8)
 	{
-		display_contacts_list_hud();
+		std::cout << YELLOW << std::setw(10) << "index" << "|";
+		std::cout << std::setw(10) << "first name" << "|";
+		std::cout << std::setw(10) << "last name" << "|";
+		std::cout << std::setw(10) << "nickname" << "|" << WHITE << std::endl;
 		for (int i = 0; i < _number_of_contacts; i++)
 		{
 			std::cout << YELLOW << std::setw(10) << i << "|" << WHITE;
@@ -56,7 +59,10 @@ void PhoneBook::searchContact()
 		std::cout << MAGENTA << "Enter the index of the contact to display" << std::endl;
 		std::cout << CYAN << "> " << WHITE;
 		std::getline(std::cin, user_input);
-		index = valid_index(user_input);
+		if (user_input.empty())
+			index = -1;
+		else
+			index = valid_index(user_input);
 	}
 	_contacts[index].showFullInfos(index);
 }

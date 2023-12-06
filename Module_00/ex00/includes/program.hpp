@@ -6,14 +6,14 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:31:16 by fllanet           #+#    #+#             */
-/*   Updated: 2023/11/20 07:41:07 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/06 10:34:25 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 //---------------   includes   ---------------//
-#include <iostream>
+# include <iostream>
 
 //---------------   colors   ---------------//
 # define RED		"\x1B[31m"

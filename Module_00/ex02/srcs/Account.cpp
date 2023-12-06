@@ -6,13 +6,11 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 18:16:56 by fllanet           #+#    #+#             */
-/*   Updated: 2023/11/20 07:29:47 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/06 11:42:08 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Account.hpp"
-#include <iostream>
-#include <ctime>
 
 int	Account::_nbAccounts = 0;
 int	Account::_totalAmount = 0;

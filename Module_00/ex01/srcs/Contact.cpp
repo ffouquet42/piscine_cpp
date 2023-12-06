@@ -6,11 +6,11 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:28:20 by fllanet           #+#    #+#             */
-/*   Updated: 2023/11/16 16:42:47 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/06 10:51:49 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/program.hpp"
+#include "../includes/Contact.hpp"
 
 Contact::Contact() {}
 Contact::~Contact() {}

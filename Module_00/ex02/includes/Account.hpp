@@ -13,6 +13,8 @@
 #define __ACCOUNT_H__
 
 # include "../includes/colors.hpp"
+# include <iostream>
+# include <ctime>
 
 // ************************************************************************** //
 //                               Account Class                                //
