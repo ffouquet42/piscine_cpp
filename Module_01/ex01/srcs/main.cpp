@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:28:32 by fllanet           #+#    #+#             */
-/*   Updated: 2023/10/17 19:19:53 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/06 14:03:28 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(void)
 {
 	std::string	name = "Bob";
-	int			N = 3;
+	int			N = 5;
 	Zombie		*horde = zombieHorde(N, name);
 	
 	for (int i = 0; i < N; i++)
