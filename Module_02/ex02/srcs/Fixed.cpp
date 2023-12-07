@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 15:13:34 by fllanet           #+#    #+#             */
-/*   Updated: 2023/11/27 15:56:59 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/07 12:16:18 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ Fixed	&Fixed::min(Fixed &fix1, Fixed &fix2) { return (fix1 < fix2) ? fix1 : fix2
 
 const Fixed	&Fixed::min(Fixed const &fix1, Fixed const &fix2) { return (fix1 < fix2) ? fix1 : fix2; }
 
-Fixed	&Fixed::max(Fixed &fix1, Fixed &fix2) { return (fix2 < fix1) ? fix2 : fix1; }
+Fixed	&Fixed::max(Fixed &fix1, Fixed &fix2) { return (fix1 < fix2) ? fix2 : fix1; }
 
-const Fixed	&Fixed::max(Fixed const &fix1, Fixed const &fix2) { return (fix2 < fix1) ? fix1 : fix2; }
+const Fixed	&Fixed::max(Fixed const &fix1, Fixed const &fix2) { return (fix1 < fix2) ? fix2 : fix1; }
 // *****   NEW   *****
