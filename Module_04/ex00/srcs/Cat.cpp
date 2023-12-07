@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:25:06 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/04 13:38:39 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/07 18:06:02 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Cat::~Cat()
 	std::cout << RED << "Cat : Destructor called" << WHITE << std::endl;
 }
 
-Cat::Cat(const Cat &cpy)
+Cat::Cat(const Cat &cpy) : Animal(cpy)
 {
 	std::cout << GREEN << "Cat : Constructor called" << WHITE << std::endl;
 	*this = cpy;

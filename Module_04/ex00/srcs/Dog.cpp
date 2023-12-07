@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:25:08 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/04 13:38:19 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/07 18:06:20 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Dog::~Dog()
 	std::cout << RED << "Dog : Destructor called" << WHITE << std::endl;
 }
 
-Dog::Dog(const Dog &cpy)
+Dog::Dog(const Dog &cpy) : Animal(cpy)
 {
 	std::cout << GREEN << "Dog : Constructor called" << WHITE << std::endl;
 	*this = cpy;

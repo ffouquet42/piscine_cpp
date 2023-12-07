@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:25:16 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/04 13:53:28 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/07 18:21:26 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ WrongCat::~WrongCat()
 	std::cout << RED << "WrongCat : Destructor called" << WHITE << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat &cpy)
+WrongCat::WrongCat(const WrongCat &cpy) : WrongAnimal(cpy)
 {
 	std::cout << GREEN << "WrongCat : Constructor called" << WHITE << std::endl;
 	*this = cpy;
