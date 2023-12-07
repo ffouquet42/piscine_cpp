@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 12:12:39 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/05 14:12:45 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/07 16:30:58 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ int main()
 	me->equip(tmp);
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
-	ICharacter* bob = new Character("bob");
-	me->use(0, *bob);
-	me->use(1, *bob);
-	delete bob;
+	ICharacter* player = new Character("player");
+	me->use(0, *player);
+	me->use(1, *player);
+	delete player;
 	delete me;
 	delete src;
 	return 0;
