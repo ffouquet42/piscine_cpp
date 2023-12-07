@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:24:52 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/04 17:11:04 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/07 19:16:16 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Animal
 		Animal(const Animal &cpy);
 		Animal &operator=(const Animal &cpy);
 
-		virtual void	makeSound() const = 0; // ?
+		virtual void	makeSound() const = 0;
 		std::string		getType() const;
 
 	protected:
