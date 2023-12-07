@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:24:59 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/04 13:45:44 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/07 19:03:43 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class WrongAnimal
 		WrongAnimal(const WrongAnimal &cpy);
 		WrongAnimal &operator=(const WrongAnimal &cpy);
 
-		virtual void	makeSound() const;
+		void	makeSound() const;
 		std::string		getType() const;
 
 	protected:
