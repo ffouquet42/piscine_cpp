@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 09:39:59 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/01 11:56:28 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/07 16:22:26 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,7 @@ DiamondTrap::DiamondTrap(const DiamondTrap &cpy) : ClapTrap(cpy), ScavTrap(cpy),
 	_hit_points = cpy._hit_points;
 	_energy = cpy._energy;
 	_attack_damage = cpy._attack_damage;
-	ClapTrap::_name = cpy._name + "_clap_name"; // _clapname_clapname ?
-	// *this = cpy;
+	ClapTrap::_name = cpy._name + "_clap_name";
 	std::cout << LIME << "DiamondTrap : Constructor called" << WHITE << std::endl;
 }
 
@@ -56,7 +55,7 @@ DiamondTrap	&DiamondTrap::operator=(const DiamondTrap &cpy)
 	_hit_points = cpy._hit_points;
 	_energy = cpy._energy;
 	_attack_damage = cpy._attack_damage;
-	ClapTrap::_name = cpy._name + "_clap_name"; // _clapname_clapname ?
+	ClapTrap::_name = cpy._name + "_clap_name";
 	std::cout << LIME << "DiamondTrap : Constructor called" << WHITE << std::endl;
 	return (*this);
 }
@@ -71,6 +70,5 @@ void	DiamondTrap::attack(const std::string &target)
 
 void	DiamondTrap::whoAmI()
 {
-	// inverse ?
 	std::cout << MAGENTA << "DiamondTrap name : " << this->_name << "\nClapTrap name : " << ClapTrap::_name << WHITE << std::endl;
 }
