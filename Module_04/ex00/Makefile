@@ -20,6 +20,9 @@ all:		$(NAME)
 $(NAME):	$(OBJS)
 	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
+.cpp.o:
+	${CC} ${FLAGS} -c $< -o ${<:.cpp=.o}
+
 clean:
 	$(RM) $(OBJS)
 
