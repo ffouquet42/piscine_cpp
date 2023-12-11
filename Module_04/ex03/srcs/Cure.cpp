@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 14:03:38 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/11 14:00:08 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/11 14:45:18 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,9 @@ Cure	&Cure::operator=(const Cure &cpy)
 	return (*this);
 }
 
-Cure	*Cure::clone() const { return (new Cure()); } // ?
+Cure	*Cure::clone() const { return (new Cure()); }
 
 void	Cure::use(ICharacter &target)
 {
-	// C
-	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+	std::cout << LIME << "* heals " << target.getName() << "'s wounds *" << WHITE << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 14:15:51 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/11 14:06:35 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/11 14:46:02 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ MateriaSource	&MateriaSource::operator=(const MateriaSource &cpy)
 	for (int i = 0; i < 4; i++)
 	{
 		if (cpy._knownSpells[i])
-			_knownSpells[i] = cpy._knownSpells[i]->clone(); // ?
+			_knownSpells[i] = cpy._knownSpells[i]->clone();
 	}
 	return (*this);
 }
@@ -55,7 +55,7 @@ void	MateriaSource::learnMateria(AMateria *m)
 	}
 }
 
-AMateria*	MateriaSource::createMateria(std::string const &type) // ?
+AMateria*	MateriaSource::createMateria(std::string const &type)
 {
 	for (int i = 0; i < 4; i++)
 	{

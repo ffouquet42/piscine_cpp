@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 14:06:45 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/11 14:02:03 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/11 14:45:14 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,9 @@ Ice		&Ice::operator=(const Ice &cpy)
 	return (*this);
 }
 
-Ice		*Ice::clone() const { return (new Ice()); } // ?
+Ice		*Ice::clone() const { return (new Ice()); }
 
 void	Ice::use(ICharacter &target)
 {
-	// C
-	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	std::cout << CYAN << "* shoots an ice bolt at " << target.getName() << " *" << WHITE << std::endl;
 }

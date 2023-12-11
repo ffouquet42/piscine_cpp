@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 11:53:25 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/11 13:55:07 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/11 14:44:19 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,11 +58,11 @@ void	Character::equip(AMateria *m)
 		if (!_inventorySpells[i])
 		{
 			_inventorySpells[i] = m;
-			std::cout << "spell added" << std::endl; // C
+			std::cout << GREEN << "New spell added to the inventory" << WHITE << std::endl;
 			return;
 		}
 	}
-	std::cout << "spell can't be added, inventory already full" << std::endl;//C
+	std::cout << RED << "Inventory full, can't add more spells" << WHITE << std::endl;
 }
 
 void	Character::unequip(int idx)
@@ -70,16 +70,16 @@ void	Character::unequip(int idx)
 	if (_inventorySpells[idx])
 	{
 		_inventorySpells[idx] = NULL;
-		std::cout << "spell dropped with success" << std::endl;
+		std::cout << YELLOW << "Spell dropped on the floor" << WHITE << std::endl;
 	}
 	else
-		std::cout << "spell can't be dropped" << std::endl; // useless ?
+		std::cout << RED << "Can't drop spell on the floor" << WHITE << std::endl;
 }
 
 void	Character::use(int idx, ICharacter &target)
 {
 	if ((idx < 0 || idx > 3) || !_inventorySpells[idx])
-		std::cout << "spell does not exist" << std::endl;
+		std::cout << RED << "No spell found at this index" << WHITE << std::endl;
 	else
 		_inventorySpells[idx]->use(target);
 }
