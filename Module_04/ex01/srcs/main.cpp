@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:25:12 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/11 12:19:45 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/11 12:26:21 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,6 @@ int main()
 	
 	for (int i = 0; i < 100; i++)
 		delete animals[i];
-
-	// Animal animal;
 
 	return (0);
 }
