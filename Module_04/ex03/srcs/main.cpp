@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 12:12:39 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/11 18:03:38 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/11 18:06:24 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ int main()
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 
-	// LEAKS
 	std::cout << std::endl;
 	std::cout << MAGENTA << "# Try to add 5th spell" << WHITE << std::endl;
 	me->equip(tmp);

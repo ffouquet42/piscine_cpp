@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 11:53:25 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/11 16:40:37 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/11 18:07:05 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Character::Character(const Character &cpy) : _name(cpy._name)
 
 	for (int i = 0; i < 4; i++)
 		if (cpy._inventorySpells[i])
-			_inventorySpells[i] = cpy._inventorySpells[i]->clone(); // ?
+			_inventorySpells[i] = cpy._inventorySpells[i]->clone();
 }
 
 Character	&Character::operator=(const Character &cpy)
