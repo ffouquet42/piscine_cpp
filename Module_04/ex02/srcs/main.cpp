@@ -6,15 +6,13 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:25:12 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/07 19:17:46 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/11 12:27:33 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Animal.hpp"
 #include "../includes/Dog.hpp"
 #include "../includes/Cat.hpp"
-#include "../includes/WrongAnimal.hpp"
-#include "../includes/WrongCat.hpp"
 #include "../includes/Brain.hpp"
 
 int main()
