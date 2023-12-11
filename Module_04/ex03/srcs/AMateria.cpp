@@ -6,27 +6,27 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 11:17:07 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/05 11:43:53 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/11 13:43:10 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/AMateria.hpp"
 
-AMateria::AMateria() : _type("default") {} // default ?
+AMateria::AMateria() {}
 
 AMateria::~AMateria() {}
 
 AMateria::AMateria(std::string const &type) : _type(type) {}
 
-AMateria::AMateria(AMateria const &cpy) { *this = cpy; }
+AMateria::AMateria(AMateria const &cpy) : _type(cpy._type) {}
 
 AMateria	&AMateria::operator=(AMateria const &cpy)
 {
-	this->_type = cpy._type;
+	if (this != &cpy)
+		_type = cpy._type;
 	return (*this);
 }
 
-void AMateria::use(ICharacter &target) { (void)target; } // (void) ?
+void AMateria::use(ICharacter &target) { (void)target; }
 
 std::string	const &AMateria::getType() const { return (this->_type); }
-// const x2 ?

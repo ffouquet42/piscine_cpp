@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 14:15:51 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/05 14:17:06 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/11 14:06:35 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,36 +15,52 @@
 MateriaSource::MateriaSource()
 {
 	for (int i = 0; i < 4; i++)
-		_materias[i] = NULL;
+		_knownSpells[i] = NULL;
 }
+
 
 MateriaSource::~MateriaSource()
 {
 	for (int i = 0; i < 4; i++)
-	{
-		delete (_materias[i]);
-		_materias[i] = NULL;
-	}
+		delete _knownSpells[i];
 }
 
-void		MateriaSource::learnMateria(AMateria *m)
+MateriaSource::MateriaSource(const MateriaSource &cpy) { *this = cpy; }
+
+MateriaSource	&MateriaSource::operator=(const MateriaSource &cpy)
+{ 
+	for (int i = 0; i < 4; i++)
+	{
+		delete _knownSpells[i];
+		_knownSpells[i] = NULL;
+	}
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (cpy._knownSpells[i])
+			_knownSpells[i] = cpy._knownSpells[i]->clone(); // ?
+	}
+	return (*this);
+}
+
+void	MateriaSource::learnMateria(AMateria *m)
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (_materias[i] == NULL)
+		if (!_knownSpells[i])
 		{
-			_materias[i] = m;
+			_knownSpells[i] = m;
 			break ;
 		}
 	}
 }
 
-AMateria	*MateriaSource::createMateria(const std::string &type)
+AMateria*	MateriaSource::createMateria(std::string const &type) // ?
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (_materias[i] != NULL && _materias[i]->getType() == type)
-			return (_materias[i]->clone());
+		if (_knownSpells[i] && _knownSpells[i]->getType() == type)
+			return (_knownSpells[i]->clone());
 	}
-	return (NULL);
+	return (0);
 }
