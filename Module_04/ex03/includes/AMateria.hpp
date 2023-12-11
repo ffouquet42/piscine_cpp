@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 11:14:39 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/05 12:10:54 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/11 13:16:52 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ class AMateria
 {
 	public:
 		AMateria();
-		virtual ~AMateria() = 0;
+		virtual ~AMateria();
 		AMateria(std::string const &type);
 		AMateria(const AMateria &cpy);
 		AMateria &operator=(const AMateria &cpy);
 		
-		virtual AMateria *clone() const = 0; // clone ?
+		virtual AMateria *clone() const = 0;
 		virtual void use(ICharacter &target);
 		std::string const &getType() const;
 

@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 12:12:39 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/07 16:33:57 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/11 13:14:43 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,28 @@
 
 int main()
 {
-	IMateriaSource* src = new MateriaSource();
-	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
-	ICharacter* player1 = new Character("player1");
-	AMateria* tmp;
-	tmp = src->createMateria("ice");
-	player1->equip(tmp);
-	tmp = src->createMateria("cure");
-	player1->equip(tmp);
-	ICharacter* player2 = new Character("player2");
-	player1->use(0, *player2);
-	player1->use(1, *player2);
-	delete player2;
-	delete player1;
-	delete src;
-	return 0;
+	// Mandatory Tests
+	// IMateriaSource* src = new MateriaSource();
+	// src->learnMateria(new Ice());
+	// src->learnMateria(new Cure());
+	// ICharacter* me = new Character("me");
+	// AMateria* tmp;
+	// tmp = src->createMateria("ice");
+	// me->equip(tmp);
+	// tmp = src->createMateria("cure");
+	// me->equip(tmp);
+	// ICharacter* bob = new Character("bob");
+	// me->use(0, *bob);
+	// me->use(1, *bob);
+	// delete bob;
+	// delete me;
+	// delete src;
+
+	std::cout << std::endl;
+	std::cout << "--------------------" << std::endl;
+	std::cout << std::endl;
+	
+	// Additionals Tests
+	
+	return (0);
 }
