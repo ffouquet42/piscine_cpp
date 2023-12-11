@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:25:04 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/04 17:03:21 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/11 18:08:58 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,6 @@ Animal &Animal::operator=(const Animal &cpy)
 	this->_type = cpy._type;
 	return (*this);
 }
-
-// void	Animal::makeSound() const
-// {
-// 	std::cout << YELLOW << "*Animal : Make Sound*" << WHITE << std::endl;
-// }
 
 std::string	Animal::getType() const
 {
