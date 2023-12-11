@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 12:12:39 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/11 16:23:13 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/11 18:03:38 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ int main()
 	
 	// Additionals Tests
 	std::cout << std::endl;
-	std::cout << YELLOW << "----- Additionals Tests -----" << WHITE << std::endl;
 	std::cout << std::endl;
+	std::cout << YELLOW << "----- Additionals Tests -----" << WHITE << std::endl;
 	
 	std::cout << std::endl;
 	std::cout << MAGENTA << "# Add 2 more spells" << WHITE << std::endl;
@@ -62,9 +62,9 @@ int main()
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 
+	// LEAKS
 	std::cout << std::endl;
 	std::cout << MAGENTA << "# Try to add 5th spell" << WHITE << std::endl;
-	tmp = src->createMateria("ice");
 	me->equip(tmp);
 
 	std::cout << std::endl;
@@ -75,7 +75,7 @@ int main()
 	me->use(3, *bob);
 
 	std::cout << std::endl;
-	std::cout << MAGENTA << "# Try to use unexisting spell" << WHITE << std::endl;
+	std::cout << MAGENTA << "# Try to use spell at index 4" << WHITE << std::endl;
 	me->use(4, *bob);
 
 	std::cout << std::endl;
