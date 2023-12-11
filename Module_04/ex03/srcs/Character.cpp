@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 11:53:25 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/11 14:44:19 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/11 15:12:24 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,16 @@ Character::Character(std::string name) : _name(name)
 {
 	for (int i = 0; i < 4; i++)
 		_inventorySpells[i] = NULL;
+	for (int i = 0; i < 100; i++)
+		_droppedSpells[i] = NULL;
 }
 
 Character::~Character()
 {
 	for (int i = 0; i < 4; i++)
 		delete _inventorySpells[i];
+	for (int i = 0; i < 100; i++)
+		delete _droppedSpells[i];
 }
 
 Character::Character(const Character &cpy) : _name(cpy._name)
@@ -67,8 +71,14 @@ void	Character::equip(AMateria *m)
 
 void	Character::unequip(int idx)
 {
+	// int i = 0;
+	
 	if (_inventorySpells[idx])
 	{
+		// while (_droppedSpells[i])
+		// 	i++;
+		// i = i >= 100 ? 0 : i; 
+		// _droppedSpells[i] = _inventorySpells[idx];
 		_inventorySpells[idx] = NULL;
 		std::cout << YELLOW << "Spell dropped on the floor" << WHITE << std::endl;
 	}

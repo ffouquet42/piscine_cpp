@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 14:13:38 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/11 13:36:39 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/11 15:14:45 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ class MateriaSource : public IMateriaSource
 {
 	public:
 		MateriaSource();
-		virtual ~MateriaSource();
+		~MateriaSource();
 		MateriaSource(const MateriaSource &cpy);
 		MateriaSource	&operator=(const MateriaSource &cpy);
 		
-		virtual void		learnMateria(AMateria *m);
-		virtual AMateria*	createMateria(std::string const &type);
+		void		learnMateria(AMateria *m);
+		AMateria*	createMateria(std::string const &type);
 
 	private:
 		AMateria	*_knownSpells[4];
