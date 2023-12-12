@@ -26,7 +26,7 @@ Module_09 : -/100
 
 ## Description
 
-These projects consist of a series of exercises to discover the cpp
+These projects consist of a series of exercises to discover the CPP.
 
 ## Overview
 
