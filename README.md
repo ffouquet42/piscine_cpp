@@ -1,82 +1,73 @@
 # CPP
 
-*Version: x.x*
+*Module_00 - Version: 9*
+*Module_01 - Version: 9.2*
+*Module_02 - Version: 8*
+*Module_03 - Version: 7*
+*Module_04 - Version: 10*
+*Module_05 - Version: -*
+*Module_06 - Version: -*
+*Module_07 - Version: -*
+*Module_08 - Version: -*
+*Module_09 - Version: -*
 
-## Grade - ../100
+## Grade - 100/100
 
-Mandatory Part : 100/100  
+Module_00 : 100/100  
+Module_01 : 100/100  
+Module_02 : 100/100  
+Module_03 : 100/100  
+Module_04 : 100/100  
+Module_05 : -/100  
+Module_06 : -/100  
+Module_07 : -/100  
+Module_08 : -/100  
+Module_09 : -/100  
 
 ## Description
 
-This project is about creating a simple shell. We will learn about processes and file descriptors.
+These projects consist of a series of exercises to discover the cpp
 
 ## Overview
 
-The shell should:  
-• Display a prompt when waiting for a new command.  
-• Have a working history.  
-• Search and launch the right executable (based on the PATH variable or using a relative or an absolute path).  
-• Avoid using more than one global variable to indicate a received signal.  
-• Not interpret unclosed quotes or special characters which are not required by the subject such as \ (backslash) or ; (semicolon).  
-• Handle ’ (single quote) which should prevent the shell from interpreting the metacharacters in the quoted sequence.  
-• Handle " (double quote) which should prevent the shell from interpreting the metacharacters in the quoted sequence except for $ (dollar sign).  
-• Implement redirections:  
-◦ < should redirect input.  
-◦ > should redirect output.  
-◦ << should be given a delimiter, then read the input until a line containing the delimiter is seen. However, it doesn’t have to update the history.  
-◦ >> should redirect output in append mode.  
-• Implement pipes (| character). The output of each command in the pipeline is connected to the input of the next command via a pipe.  
-• Handle environment variables ($ followed by a sequence of characters) which should expand to their values.  
-• Handle $? which should expand to the exit status of the most recently executed foreground pipeline.  
-• Handle ctrl-C, ctrl-D and ctrl-\ which should behave like in bash.  
-• In interactive mode:  
-◦ ctrl-C displays a new prompt on a new line.  
-◦ ctrl-D exits the shell.  
-◦ ctrl-\ does nothing.  
-• The shell must implement the following builtins:  
-◦ echo with option -n  
-◦ cd with only a relative or absolute path  
-◦ pwd with no options  
-◦ export with no options  
-◦ unset with no options  
-◦ env with no options or arguments  
-◦ exit with no options
-  
-## What's in this project
+Module_00 :  
+This first module of C++ is designed to help you understand the specifities of the language when compared to C. Time to dive into Object Oriented Programming!
 
-It was realized without the bonuses. All the files are normed following the standard of 42.
+Module_01 :  
+This module is designed to help you understand the memory allocation, reference, pointers to members and the usage of the switch in CPP.
 
-This project contains the necessary Minishell code.
+Module_02 :  
+This module is designed to help you understand Ad-hoc polymorphism, overloads and orthodox canonical classes in CPP.
 
-* includes
+Module_03 :  
+This module is designed to help you understand Inheritance in CPP.
 
-`*.h` 
+Module_04 :  
+This module is designed to help you understand Subtype polymorphism, abstract classes and interfaces in CPP.
 
-* srcs
+Module_05 :  
+This module is designed to help you understand Try/Catch and Exceptions in CPP.
 
-`*.c` 
 
-* others
+Module_06 :  
+This module is designed to help you understand the different casts in CPP.
 
-`Makefile`  
-`Subjects : en(v7.1) + fr(v6.1)`  
+Module_07 :  
+This module is designed to help you understand Templates in CPP.
 
-## How to use it
 
-Create the executables : `minishell`.
-```javascript
-make
-```
+Module_08 :  
+This module is designed to help you understand templated containers, iterators and algorithms in CPP.
+
+Module_09 :  
+This module is designed to help you understand the containers in CPP.
 
 ## Testing
-
-This project respects the norm of 42 and has been tested with the norminette.  
 
 This project has been tested with valgrind and contains no leaks.  
 All tests return : `All heap blocks were freed -- no leaks are possible`. 
 
-The readline() function can cause memory leaks. We don’t have to fix them. But that doesn’t mean our own code can have memory leaks.
- 
+
 ## Credit
 
 Project made by [ffouquet42](https://github.com/ffouquet42)
