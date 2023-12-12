@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 12:25:08 by fllanet           #+#    #+#             */
-/*   Updated: 2023/12/04 16:25:08 by fllanet          ###   ########.fr       */
+/*   Updated: 2023/12/12 16:36:38 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ Dog::~Dog()
 
 Dog::Dog(const Dog &cpy) : Animal(cpy)
 {
-	std::cout << GREEN << "Dog : Constructor called" << WHITE << std::endl;
+	std::cout << GREEN << "Dog : Copy Constructor called" << WHITE << std::endl;
 	*this = cpy;
 }
 
 Dog &Dog::operator=(const Dog &cpy)
 {
-	std::cout << GREEN << "Dog : Constructor called" << WHITE << std::endl;
+	std::cout << GREEN << "Dog : Copy Operator called" << WHITE << std::endl;
 	this->_type = cpy._type;
 	this->_brain = new Brain(*cpy._brain);
 	return (*this);
