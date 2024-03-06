@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:14 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/02 15:53:15 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/06 12:40:17 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,9 @@ class Bureaucrat
 				std::string	tooLow() const throw();
 		};
 
-		std::string	getName(); // const ?
-		int			getGrade(); // const ?
+		std::string	getName() const;
+		int			getGrade() const;
+		void		getStatus(std::string name, int grade);
 
 		void		incrementGrade();
 		void		decrementGrade();
