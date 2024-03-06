@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:09 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/06 12:53:12 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/06 12:59:29 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int main(void) // Ajouter valeur de retour + valeur attendue retournee
 {
+	// test creer Bureaucrat sans name ou grade + copy ect
+	
 	try {
 		std::cout << YELLOW << "\nTest #001 : Create Bureaucrat <A> with grade <0>" << WHITE << std::endl;
 		Bureaucrat A("A", 0);

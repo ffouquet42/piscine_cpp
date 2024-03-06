@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:12 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/06 12:56:09 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/06 13:02:38 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name)
 	else if (grade > 150)
 		throw GradeTooLowException();
 	_grade = grade;
-	std::cout << GREEN << "++ Bureaucrat constructor called" << WHITE << std::endl;
+	std::cout << GREEN << "++ Bureaucrat default constructor called" << WHITE << std::endl; // ++?
 }
 
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << RED << "-- Bureaucrat destructor called" << WHITE << std::endl; 
+	std::cout << RED << "-- Bureaucrat destructor called" << WHITE << std::endl;  // --?
 }
 
 // Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name), _grade(grade)
@@ -74,16 +74,12 @@ void		Bureaucrat::getStatus(std::string name, int grade)
 
 void		Bureaucrat::incrementGrade() // Ternaire?
 {
-	if (_grade == 1)
-		throw GradeTooHighException();
-	_grade--;
-	std::cout << BLUE << "Grade incremented with success" << WHITE << std::endl;
+	_grade = (_grade == 1) ? throw GradeTooHighException() : _grade - 1;
+    std::cout << BLUE << "Grade incremented with success" << WHITE << std::endl;
 }
 
 void		Bureaucrat::decrementGrade() // Ternaire?
 {
-	if (_grade == 150)
-		throw GradeTooLowException();
-	_grade++;
-	std::cout << BLUE << "Grade decremented with success" << WHITE << std::endl;
+	_grade = (_grade == 150) ? throw GradeTooLowException() : _grade + 1;
+    std::cout << BLUE << "Grade decremented with success" << WHITE << std::endl;
 }
