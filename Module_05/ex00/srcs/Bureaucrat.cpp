@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:12 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/06 13:03:29 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/06 14:14:39 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,32 +21,32 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name)
 	else if (grade > 150)
 		throw GradeTooLowException();
 	_grade = grade;
-	std::cout << GREEN << "++ Bureaucrat default constructor called" << WHITE << std::endl; // ++?
+	std::cout << GREEN << "++ Bureaucrat default constructor called" << WHITE << std::endl;
 }
 
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << RED << "-- Bureaucrat destructor called" << WHITE << std::endl;  // --?
+	std::cout << RED << "-- Bureaucrat destructor called" << WHITE << std::endl;
 }
 
-// Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name), _grade(grade)
-// {
-// 	std::cout << GREEN << "Constructor called" << WHITE << std::endl;
-// }
+Bureaucrat::Bureaucrat(const Bureaucrat &cpy) : _name(cpy._name)
+{
+	*this = cpy;
+	std::cout << GREEN << "++ Bureaucrat copy constructor called" << WHITE << std::endl;
+}
 
-// Bureaucrat::Bureaucrat(const Bureaucrat &cpy)
-// {
-// 	*this = cpy;
-// 	std::cout << GREEN << "Constructor called" << WHITE << std::endl;
-// }
+Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &cpy)
+{
+	_grade = cpy._grade;
+	std::cout << GREEN << "++ Bureaucrat copy assignment operator called" << WHITE << std::endl;
+	return (*this);
+}
 
-// Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &cpy)
-// {
-// 	_name = cpy._name;
-// 	_grade = cpy._grade;
-// 	std::cout << GREEN << "Constructor called" << WHITE << std::endl;
-// 	return (*this);
-// }
+std::ostream &operator<<(std::ostream &os, const Bureaucrat &cpy) // Test + move
+{
+	os << cpy.getName() << ", bureaucrat grade " << cpy.getGrade() << ".";
+	return (os);
+}
 
 
 //---------------   Exceptions   ---------------//

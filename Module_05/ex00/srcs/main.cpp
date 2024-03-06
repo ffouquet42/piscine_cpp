@@ -6,16 +6,14 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:09 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/06 12:59:29 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/06 14:09:33 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Bureaucrat.hpp"
 
-int main(void) // Ajouter valeur de retour + valeur attendue retournee
+int main(void)
 {
-	// test creer Bureaucrat sans name ou grade + copy ect
-	
 	try {
 		std::cout << YELLOW << "\nTest #001 : Create Bureaucrat <A> with grade <0>" << WHITE << std::endl;
 		Bureaucrat A("A", 0);
@@ -64,6 +62,19 @@ int main(void) // Ajouter valeur de retour + valeur attendue retournee
 		D.getStatus(D.getName(), D.getGrade());
 		std::cout << YELLOW << "Test #010 : Bureaucrat <D> decrement grade" << WHITE << std::endl;
 		D.decrementGrade();
+	} catch(Bureaucrat::GradeTooHighException &e) {
+		std::cout << MAGENTA << e.tooHigh() << WHITE << std::endl;
+	} catch(Bureaucrat::GradeTooLowException &e) {
+		std::cout << MAGENTA << e.tooLow() << WHITE << std::endl;
+	}
+
+	try {
+		std::cout << YELLOW << "\nTest #011 : Create Bureaucrat <E> with grade <100>" << WHITE << std::endl;
+		Bureaucrat E("E", 100);
+		E.getStatus(E.getName(), E.getGrade());
+		std::cout << YELLOW << "Test #011 : Create Bureaucrat <F> via copy of Bureaucrat <E>" << WHITE << std::endl;
+		Bureaucrat F(E);
+		F.getStatus(F.getName(), F.getGrade());
 	} catch(Bureaucrat::GradeTooHighException &e) {
 		std::cout << MAGENTA << e.tooHigh() << WHITE << std::endl;
 	} catch(Bureaucrat::GradeTooLowException &e) {
