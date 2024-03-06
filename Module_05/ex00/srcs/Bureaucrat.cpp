@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:12 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/06 13:02:38 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/06 13:03:29 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,13 +72,13 @@ void		Bureaucrat::getStatus(std::string name, int grade)
 	std::cout << "Bureaucrat <" << name << "> is grade <" << grade << ">" << std::endl;
 }
 
-void		Bureaucrat::incrementGrade() // Ternaire?
+void		Bureaucrat::incrementGrade()
 {
 	_grade = (_grade == 1) ? throw GradeTooHighException() : _grade - 1;
     std::cout << BLUE << "Grade incremented with success" << WHITE << std::endl;
 }
 
-void		Bureaucrat::decrementGrade() // Ternaire?
+void		Bureaucrat::decrementGrade()
 {
 	_grade = (_grade == 150) ? throw GradeTooLowException() : _grade + 1;
     std::cout << BLUE << "Grade decremented with success" << WHITE << std::endl;
