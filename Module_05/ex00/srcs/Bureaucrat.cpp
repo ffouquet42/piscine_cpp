@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:12 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/06 14:14:39 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/07 12:17:59 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,10 @@ Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &cpy)
 	return (*this);
 }
 
-std::ostream &operator<<(std::ostream &os, const Bureaucrat &cpy) // Test + move
+
+//---------------   Display   ---------------//
+
+std::ostream &operator<<(std::ostream &os, const Bureaucrat &cpy)
 {
 	os << cpy.getName() << ", bureaucrat grade " << cpy.getGrade() << ".";
 	return (os);
@@ -66,11 +69,6 @@ std::string	Bureaucrat::GradeTooLowException::tooLow() const throw()
 
 std::string	Bureaucrat::getName() const { return (_name); }
 int			Bureaucrat::getGrade() const { return (_grade); }
-
-void		Bureaucrat::getStatus(std::string name, int grade)
-{
-	std::cout << "Bureaucrat <" << name << "> is grade <" << grade << ">" << std::endl;
-}
 
 void		Bureaucrat::incrementGrade()
 {

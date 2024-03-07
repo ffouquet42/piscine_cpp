@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:14 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/06 13:50:55 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/07 12:13:34 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class Bureaucrat
 {
 	public:
-		Bureaucrat(const std::string name, int grade); // + constructor vide ?
+		Bureaucrat(const std::string name, int grade);
 		~Bureaucrat();
 		Bureaucrat(const Bureaucrat &cpy);
 		Bureaucrat &operator=(const Bureaucrat &cpy);
@@ -37,7 +37,6 @@ class Bureaucrat
 
 		std::string	getName() const;
 		int			getGrade() const;
-		void		getStatus(std::string name, int grade);
 
 		void		incrementGrade();
 		void		decrementGrade();
@@ -47,7 +46,7 @@ class Bureaucrat
 		int 				_grade;
 };
 
-std::ostream &operator<<(std::ostream &os, const Bureaucrat &cpy); // check old modules
+std::ostream &operator<<(std::ostream &os, const Bureaucrat &cpy);
 
 //---------------   colors   ---------------//
 # define RED			"\x1B[31m"

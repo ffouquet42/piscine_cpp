@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:09 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/06 14:09:33 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/07 12:16:06 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ int main(void)
 	try {
 		std::cout << YELLOW << "\nTest #003 : Create Bureaucrat <C> with grade <1>" << WHITE << std::endl;
 		Bureaucrat C("C", 1);
-		C.getStatus(C.getName(), C.getGrade());
+		std::cout << C << std::endl;
 		std::cout << YELLOW << "Test #004 : Bureaucrat <C> decrement grade" << WHITE << std::endl;
 		C.decrementGrade();
-		C.getStatus(C.getName(), C.getGrade());
+		std::cout << C << std::endl;
 		std::cout << YELLOW << "Test #005 : Bureaucrat <C> increment grade" << WHITE << std::endl;
 		C.incrementGrade();
-		C.getStatus(C.getName(), C.getGrade());
+		std::cout << C << std::endl;
 		std::cout << YELLOW << "Test #006 : Bureaucrat <C> increment grade" << WHITE << std::endl;
 		C.incrementGrade();
 	} catch(Bureaucrat::GradeTooHighException &e) {
@@ -53,13 +53,13 @@ int main(void)
 	try {
 		std::cout << YELLOW << "\nTest #007 : Create Bureaucrat <D> with grade <150>" << WHITE << std::endl;
 		Bureaucrat D("D", 150);
-		D.getStatus(D.getName(), D.getGrade());
+		std::cout << D << std::endl;
 		std::cout << YELLOW << "Test #008 : Bureaucrat <D> increment grade" << WHITE << std::endl;
 		D.incrementGrade();
-		D.getStatus(D.getName(), D.getGrade());
+		std::cout << D << std::endl;
 		std::cout << YELLOW << "Test #009 : Bureaucrat <D> decrement grade" << WHITE << std::endl;
 		D.decrementGrade();
-		D.getStatus(D.getName(), D.getGrade());
+		std::cout << D << std::endl;
 		std::cout << YELLOW << "Test #010 : Bureaucrat <D> decrement grade" << WHITE << std::endl;
 		D.decrementGrade();
 	} catch(Bureaucrat::GradeTooHighException &e) {
@@ -71,10 +71,10 @@ int main(void)
 	try {
 		std::cout << YELLOW << "\nTest #011 : Create Bureaucrat <E> with grade <100>" << WHITE << std::endl;
 		Bureaucrat E("E", 100);
-		E.getStatus(E.getName(), E.getGrade());
-		std::cout << YELLOW << "Test #011 : Create Bureaucrat <F> via copy of Bureaucrat <E>" << WHITE << std::endl;
+		std::cout << E << std::endl;
+		std::cout << YELLOW << "Test #012 : Create Bureaucrat <F> via copy of Bureaucrat <E>" << WHITE << std::endl;
 		Bureaucrat F(E);
-		F.getStatus(F.getName(), F.getGrade());
+		std::cout << F << std::endl;
 	} catch(Bureaucrat::GradeTooHighException &e) {
 		std::cout << MAGENTA << e.tooHigh() << WHITE << std::endl;
 	} catch(Bureaucrat::GradeTooLowException &e) {
