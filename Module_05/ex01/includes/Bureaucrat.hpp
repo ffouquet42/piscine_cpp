@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:14 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/07 12:13:34 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/07 14:05:47 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ class Bureaucrat
 		int 				_grade;
 };
 
-std::ostream &operator<<(std::ostream &os, const Bureaucrat &cpy);
+std::ostream &operator<<(std::ostream &os, const Bureaucrat &b);
 
 //---------------   colors   ---------------//
 # define RED			"\x1B[31m"

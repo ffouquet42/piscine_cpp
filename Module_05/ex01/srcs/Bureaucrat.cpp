@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:12 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/07 12:17:59 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/07 14:05:35 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &cpy)
 
 //---------------   Display   ---------------//
 
-std::ostream &operator<<(std::ostream &os, const Bureaucrat &cpy)
+std::ostream &operator<<(std::ostream &os, const Bureaucrat &b)
 {
-	os << cpy.getName() << ", bureaucrat grade " << cpy.getGrade() << ".";
+	os << b.getName() << ", bureaucrat grade " << b.getGrade() << ".";
 	return (os);
 }
 

@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 12:32:00 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/07 13:29:05 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/07 14:05:41 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ class Form
 		int			getSignGrade() const;
 		int			getExecGrade() const;
 		
+		void		beSigned(Bureaucrat &b);
+
 	private:
 		const std::string	_name;
 		bool				_is_signed;
@@ -46,4 +48,4 @@ class Form
 		const int			_exec_grade;
 };
 
-std::ostream &operator<<(std::ostream &os, const Form &cpy);
+std::ostream &operator<<(std::ostream &os, const Form &f);

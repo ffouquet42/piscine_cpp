@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:09 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/07 13:35:09 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/07 14:17:17 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,6 +126,22 @@ int main(void)
 		std::cout << YELLOW << "\nTest #017 : Create Form <E> with sign_grade <1> and exec_grade <1>" << WHITE << std::endl;
 		Form E("E", 1, 1);
 		std::cout << E << std::endl;
+		std::cout << YELLOW << "Test #018 : Create Form <F> via copy of Form <E>" << WHITE << std::endl;
+		Form F(E);
+		std::cout << F << std::endl;
+		std::cout << YELLOW << "Test #019 : Create Bureaucrat <G> with grade <10>" << WHITE << std::endl;
+		Bureaucrat G("G", 10);
+		std::cout << G << std::endl;
+		std::cout << YELLOW << "Test #020 : Create Form <H> with sign_grade <50> and exec_grade <50>" << WHITE << std::endl;
+		Form H("H", 50, 50);
+		std::cout << H << std::endl;
+		std::cout << YELLOW << "Test #021 : Bureaucrat <G> try to sign Form <H>" << WHITE << std::endl;
+		std::cout << H << std::endl;
+		H.beSigned(G);
+		std::cout << H << std::endl;
+		std::cout << YELLOW << "Test #022 : Bureaucrat <G> try to sign Form <E>" << WHITE << std::endl;
+		std::cout << E << std::endl;
+		E.beSigned(G);
 	} catch(Form::GradeTooHighException &e) {
 		std::cout << MAGENTA << e.tooHigh() << WHITE << std::endl;
 	} catch(Form::GradeTooLowException &e) {
