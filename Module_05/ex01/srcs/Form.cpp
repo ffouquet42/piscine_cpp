@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 12:32:04 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/07 14:21:47 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/08 11:39:29 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,7 @@ int			Form::getExecGrade() const { return (_exec_grade); }
 void		Form::beSigned(Bureaucrat &b)
 {
 	if (_sign_grade < b.getGrade())
-		throw GradeTooLowException(); // bon msg?
+		throw GradeTooLowException();
 	if (!_is_signed)
-	{
 		_is_signed = true;
-		std::cout << BLUE << "Form <" << _name << "> has been signed by <" << b.getName() << ">" << WHITE << std::endl; // bon msg? (signForm()?)
-	}
 }

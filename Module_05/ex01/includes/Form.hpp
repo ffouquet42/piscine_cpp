@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 12:32:00 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/07 14:05:41 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/08 11:26:37 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include "Bureaucrat.hpp"
 
 //---------------   class   ---------------//
+class Bureaucrat;
+
 class Form
 {
 	public:

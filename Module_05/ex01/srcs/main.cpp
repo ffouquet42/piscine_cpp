@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:09 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/07 14:17:17 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/08 11:36:21 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,18 +136,38 @@ int main(void)
 		Form H("H", 50, 50);
 		std::cout << H << std::endl;
 		std::cout << YELLOW << "Test #021 : Bureaucrat <G> try to sign Form <H>" << WHITE << std::endl;
-		std::cout << H << std::endl;
-		H.beSigned(G);
+		G.signForm(H);
 		std::cout << H << std::endl;
 		std::cout << YELLOW << "Test #022 : Bureaucrat <G> try to sign Form <E>" << WHITE << std::endl;
 		std::cout << E << std::endl;
-		E.beSigned(G);
+		G.signForm(E);
 	} catch(Form::GradeTooHighException &e) {
 		std::cout << MAGENTA << e.tooHigh() << WHITE << std::endl;
 	} catch(Form::GradeTooLowException &e) {
 		std::cout << MAGENTA << e.tooLow() << WHITE << std::endl;
 	}
 
+	try {
+		std::cout << YELLOW << "\nTest #023 : Create Bureaucrat <I> with grade <100>" << WHITE << std::endl;
+		Bureaucrat I("I", 100);
+		std::cout << I << std::endl;
+		std::cout << YELLOW << "Test #024 : Create Form <J> with sign_grade <99> and exec_grade <99>" << WHITE << std::endl;
+		Form J("J", 99, 99);
+		std::cout << J << std::endl;
+		std::cout << YELLOW << "Test #025 : Bureaucrat <I> try to sign Form <J>" << WHITE << std::endl;
+		I.signForm(J);
+		std::cout << J << std::endl;
+		std::cout << YELLOW << "Test #026 : Bureaucrat <I> increment grade" << WHITE << std::endl;
+		I.incrementGrade();
+		std::cout << I << std::endl;
+		std::cout << YELLOW << "Test #027 : Bureaucrat <I> try to sign Form <J>" << WHITE << std::endl;
+		I.signForm(J);
+		std::cout << J << std::endl;
+	} catch(Form::GradeTooHighException &e) {
+		std::cout << MAGENTA << e.tooHigh() << WHITE << std::endl;
+	} catch(Form::GradeTooLowException &e) {
+		std::cout << MAGENTA << e.tooLow() << WHITE << std::endl;
+	}
 	
 	return (0);
 }

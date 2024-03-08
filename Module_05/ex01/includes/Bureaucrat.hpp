@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:14 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/07 14:05:47 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/08 11:26:25 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 //---------------   includes   ---------------//
 # include <iostream>
 # include <exception>
+# include "Form.hpp"
 
 //---------------   class   ---------------//
+class Form;
+
 class Bureaucrat
 {
 	public:
@@ -40,6 +43,8 @@ class Bureaucrat
 
 		void		incrementGrade();
 		void		decrementGrade();
+
+		void		signForm(Form &f);
 		
 	private:
 		const std::string	_name;

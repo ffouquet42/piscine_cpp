@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:12 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/07 14:05:35 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/08 11:29:15 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,14 @@ void		Bureaucrat::decrementGrade()
 {
 	_grade = (_grade == 150) ? throw GradeTooLowException() : _grade + 1;
     std::cout << BLUE << "Grade decremented with success" << WHITE << std::endl;
+}
+
+void	Bureaucrat::signForm(Form &f)
+{
+	try {
+		f.beSigned(*this);
+		std::cout << BLUE << _name << " signed " << f.getName() << WHITE << std::endl;
+	} catch (std::exception &e) {
+		std::cout << BLUE << _name << " couldn't sign " << f.getName() << " because grade is too low" << WHITE << std::endl;
+	}
 }
