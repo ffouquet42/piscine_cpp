@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 21:23:47 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 00:12:10 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/12 00:24:53 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,15 @@ ShrubberyCreationForm	&ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 //---------------   Functions   ---------------//
 
-// test all possibilty and dispositions
+// test all possibilty in main and update disposition
 bool	ShrubberyCreationForm::execute(Bureaucrat &b) const
 {
 	try {
-		AForm::execute(b);
+		AForm::execute(b); // at start?
 
 		std::ofstream outFile((_target + "_shrubbery").c_str()); // outFile=>out
 
+		// color ?
 		outFile << "       /\\" << std::endl;
 		outFile << "      /\\/\\" << std::endl;
 		outFile << "     /\\/\\/\\" << std::endl;
