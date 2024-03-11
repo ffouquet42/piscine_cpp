@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 21:22:59 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/11 22:35:52 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/11 23:19:02 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class PresidentialPardonForm : public AForm
 		~PresidentialPardonForm(); // virtual ?
 		PresidentialPardonForm(const PresidentialPardonForm &cpy);
 		PresidentialPardonForm &operator=(const PresidentialPardonForm &cpy);
-		
+
 		bool	execute(Bureaucrat &b) const;
 
 	private:

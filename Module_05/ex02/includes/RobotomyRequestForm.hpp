@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 21:23:02 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/11 22:34:29 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/11 23:18:52 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class RobotomyRequestForm : public AForm
 		~RobotomyRequestForm(); // virtual ?
 		RobotomyRequestForm(const RobotomyRequestForm &cpy);
 		RobotomyRequestForm &operator=(const RobotomyRequestForm &cpy);
-		
+
 		bool	execute(Bureaucrat &b) const;
 
 	private:
