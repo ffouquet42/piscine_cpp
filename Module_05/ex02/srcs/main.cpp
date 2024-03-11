@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:09 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/08 11:36:21 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/11 22:00:38 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,10 +81,6 @@ int main(void)
 	} catch(Bureaucrat::GradeTooLowException &e) {
 		std::cout << MAGENTA << e.tooLow() << WHITE << std::endl;
 	}
-
-
-	//---------------   New Tests   ---------------//
-	std::cout << YELLOW << "\n\n===== NEW TESTS =====" << WHITE << std::endl;
 
 	try {
 		std::cout << YELLOW << "\nTest #013 : Create Form <A> with sign_grade <1> and exec_grade <0>" << WHITE << std::endl;
@@ -168,6 +164,9 @@ int main(void)
 	} catch(Form::GradeTooLowException &e) {
 		std::cout << MAGENTA << e.tooLow() << WHITE << std::endl;
 	}
+
+	//---------------   New Tests   ---------------//
+	std::cout << YELLOW << "\n\n===== NEW TESTS =====" << WHITE << std::endl;
 	
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:12 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/08 11:29:15 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/11 22:12:05 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void		Bureaucrat::decrementGrade()
     std::cout << BLUE << "Grade decremented with success" << WHITE << std::endl;
 }
 
-void	Bureaucrat::signForm(Form &f)
+void	Bureaucrat::signForm(AForm &f)
 {
 	try {
 		f.beSigned(*this);
@@ -91,3 +91,8 @@ void	Bureaucrat::signForm(Form &f)
 		std::cout << BLUE << _name << " couldn't sign " << f.getName() << " because grade is too low" << WHITE << std::endl;
 	}
 }
+
+// void	Bureaucrat::executeForm(AForm const &f)
+// {
+
+// }

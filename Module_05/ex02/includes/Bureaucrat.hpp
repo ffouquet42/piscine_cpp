@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:14 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/08 11:26:25 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/11 22:02:49 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 //---------------   includes   ---------------//
 # include <iostream>
 # include <exception>
-# include "Form.hpp"
+# include "AForm.hpp"
 
 //---------------   class   ---------------//
-class Form;
+class AForm;
 
 class Bureaucrat
 {
 	public:
 		Bureaucrat(const std::string name, int grade);
-		~Bureaucrat();
+		~Bureaucrat(); // virtual ?
 		Bureaucrat(const Bureaucrat &cpy);
 		Bureaucrat &operator=(const Bureaucrat &cpy);
 
@@ -44,7 +44,8 @@ class Bureaucrat
 		void		incrementGrade();
 		void		decrementGrade();
 
-		void		signForm(Form &f);
+		void		signForm(AForm &f);
+		void		executeForm(AForm const &f);
 		
 	private:
 		const std::string	_name;
