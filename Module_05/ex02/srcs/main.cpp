@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:09 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 00:43:32 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/12 15:21:43 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,15 +166,16 @@ int main(void)
 	// }
 
 	//---------------   New Tests   ---------------//
-	std::cout << YELLOW << "\n\n===== NEW TESTS =====" << WHITE << std::endl;
+	// std::cout << YELLOW << "\n\n===== NEW TESTS =====" << WHITE << std::endl;
 
-	// try {
-		
-	// } catch(AForm::GradeTooHighException &e) {
-	// 	std::cout << MAGENTA << e.tooHigh() << WHITE << std::endl;
-	// } catch(AForm::GradeTooLowException &e) {
-	// 	std::cout << MAGENTA << e.tooLow() << WHITE << std::endl;
-	// }
+	try {
+		std::cout << YELLOW << "\nTest #001 : Create Bureaucrat <A> with grade <0>" << WHITE << std::endl;
+		Bureaucrat A("A", 0);
+	} catch(Bureaucrat::GradeTooHighException &e) {
+		std::cout << MAGENTA << e.tooHigh() << WHITE << std::endl;
+	} catch(Bureaucrat::GradeTooLowException &e) {
+		std::cout << MAGENTA << e.tooLow() << WHITE << std::endl;
+	}
 	
 	return (0);
 }
