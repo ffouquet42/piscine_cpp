@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 21:23:47 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 23:48:40 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/13 00:17:31 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ bool	ShrubberyCreationForm::execute(Bureaucrat &b) const
 	try {
 		AForm::execute(b);
 
-		std::ofstream outFile((_target + "_shrubbery").c_str()); // outFile=>out
+		std::ofstream outFile((_target + "_shrubbery").c_str());
 
 		outFile << "        /\\" << std::endl;
 		outFile << "       /\\/\\" << std::endl;

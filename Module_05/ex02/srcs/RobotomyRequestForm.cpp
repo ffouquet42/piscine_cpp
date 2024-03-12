@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 21:23:50 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 23:50:10 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/13 00:29:46 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,13 @@ bool	RobotomyRequestForm::execute(Bureaucrat &b) const
 		AForm::execute(b);
 
 		std::srand(std::time(NULL));
-		int rand = std::rand(); // range 0-1 ?
+		int rand = std::rand();
 		
-		std::cout << "VroumVroum" << std::endl; // update + color
-		if (rand)
-			std::cout << "success" << std::endl; // update + color
+		std::cout << CYAN << "*drilling noise*" << WHITE << std::endl;
+		if (rand % 2 == 0)
+			std::cout << CYAN << _target << " has been robotomized successfully." << WHITE << std::endl;
 		else
-			std::cout << "fail" << std::endl; // update + color
+			std::cout << CYAN << "Robotomy failed." << WHITE << std::endl;
 		
 		return (true);
 	} catch(AForm::GradeTooHighException &e) {

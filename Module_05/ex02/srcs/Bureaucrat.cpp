@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:12 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 23:46:41 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/13 00:15:37 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ void	Bureaucrat::signForm(AForm &f)
 		f.beSigned(*this);
 		std::cout << BLUE << _name << " signed " << f.getName() << WHITE << std::endl;
 	} catch (std::exception &e) {
-		std::cout << BLUE << _name << " couldn't sign " << f.getName() << " because grade is too low" << WHITE << std::endl;
+		std::cout << MAGENTA << "=> " << _name << " couldn't sign " << f.getName() << " because grade is too low" << WHITE << std::endl;
 	}
 }
 
