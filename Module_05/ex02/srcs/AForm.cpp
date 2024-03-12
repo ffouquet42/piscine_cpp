@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 12:32:04 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 15:20:22 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/12 23:39:14 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ AForm	&AForm::operator=(const AForm &cpy)
 
 std::ostream &operator<<(std::ostream &os, const AForm &f)
 {
-	os << "AForm " << f.getName() << ", sign grade: " << f.getSignGrade() << " , exec grade: " << f.getExecGrade() << " , is: ";
+	os << f.getName() << ", sign grade: " << f.getSignGrade() << " , exec grade: " << f.getExecGrade() << " , is: ";
 	f.getIsSigned() ? os << "Signed." : os << "Not Signed.";
 	return (os);
 }

@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 21:23:47 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 00:24:53 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/12 23:32:43 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,14 +49,14 @@ bool	ShrubberyCreationForm::execute(Bureaucrat &b) const
 		std::ofstream outFile((_target + "_shrubbery").c_str()); // outFile=>out
 
 		// color ?
-		outFile << "       /\\" << std::endl;
-		outFile << "      /\\/\\" << std::endl;
-		outFile << "     /\\/\\/\\" << std::endl;
-		outFile << "    /\\/\\/\\/\\" << std::endl;
-		outFile << "   /\\/\\/\\/\\/\\" << std::endl;
-		outFile << "  /\\/\\/\\/\\/\\/\\" << std::endl;
-		outFile << " /\\/\\/\\/\\/\\/\\/\\" << std::endl;
-		outFile << "/\\/\\/\\/\\/\\/\\/\\/\\" << std::endl;
+		outFile << "        /\\" << std::endl;
+		outFile << "       /\\/\\" << std::endl;
+		outFile << "      /\\/\\/\\" << std::endl;
+		outFile << "     /\\/\\/\\/\\" << std::endl;
+		outFile << "    /\\/\\/\\/\\/\\" << std::endl;
+		outFile << "   /\\/\\/\\/\\/\\/\\" << std::endl;
+		outFile << "  /\\/\\/\\/\\/\\/\\/\\" << std::endl;
+		outFile << " /\\/\\/\\/\\/\\/\\/\\/\\" << std::endl;
 		outFile << "/\\/\\/\\/\\/\\/\\/\\/\\/\\" << std::endl;
 		outFile << "------------------" << std::endl;
 		outFile << "        ||" << std::endl;

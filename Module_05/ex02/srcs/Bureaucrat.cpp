@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:12 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 15:20:26 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/12 23:42:29 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ void	Bureaucrat::signForm(AForm &f)
 void	Bureaucrat::executeForm(AForm const &f)
 {
 	if (f.execute(*this))
-		std::cout << getName() << " executed " << f.getName() << std::endl;
+		std::cout << BLUE << getName() << " executed " << f.getName() << WHITE << std::endl;
 	else
-		std::cout << getName() << " can't execute " << f.getName() << std::endl;
+		std::cout << BLUE << getName() << " can't execute " << f.getName() << WHITE << std::endl;
 }
