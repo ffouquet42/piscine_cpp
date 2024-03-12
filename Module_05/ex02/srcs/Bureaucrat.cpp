@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:12 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 23:42:29 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/12 23:46:41 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,6 @@ void	Bureaucrat::signForm(AForm &f)
 	}
 }
 
- // update + color
 void	Bureaucrat::executeForm(AForm const &f)
 {
 	if (f.execute(*this))

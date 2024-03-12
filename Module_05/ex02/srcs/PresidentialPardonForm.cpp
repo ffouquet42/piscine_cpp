@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 21:23:55 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 00:27:23 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/12 23:49:55 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,10 @@ PresidentialPardonForm	&PresidentialPardonForm::operator=(const PresidentialPard
 
 //---------------   Functions   ---------------//
 
-// test all possibilty in main and update disposition
 bool	PresidentialPardonForm::execute(Bureaucrat &b) const
 {
 	try {
-		AForm::execute(b); // at start?
+		AForm::execute(b);
 
 		std::cout << "pardon" << std::endl; // change + color
 		

@@ -6,16 +6,19 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 12:32:00 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 00:28:48 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/12 23:49:11 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 //---------------   includes   ---------------//
+
 # include "Bureaucrat.hpp"
 
+
 //---------------   class   ---------------//
+
 class Bureaucrat;
 
 class AForm

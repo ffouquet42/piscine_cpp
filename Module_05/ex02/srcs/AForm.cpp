@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 12:32:04 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 23:39:14 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/12 23:47:00 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,6 @@ void		AForm::beSigned(Bureaucrat &b)
 		_is_signed = true;
 }
 
- // update + color
 bool		AForm::execute(Bureaucrat &b) const
 {
 	if (b.getGrade() > this->getExecGrade())

@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 21:23:50 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 00:25:18 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/12 23:50:10 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,10 @@ RobotomyRequestForm	&RobotomyRequestForm::operator=(const RobotomyRequestForm &c
 
 //---------------   Functions   ---------------//
 
-// test all possibilty in main and update disposition
 bool	RobotomyRequestForm::execute(Bureaucrat &b) const
 {
 	try {
-		AForm::execute(b); // at start?
+		AForm::execute(b);
 
 		std::srand(std::time(NULL));
 		int rand = std::rand(); // range 0-1 ?

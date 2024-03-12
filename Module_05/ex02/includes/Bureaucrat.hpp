@@ -6,18 +6,21 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:14 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/11 22:02:49 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/12 23:49:05 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 //---------------   includes   ---------------//
+
 # include <iostream>
 # include <exception>
 # include "AForm.hpp"
 
+
 //---------------   class   ---------------//
+
 class AForm;
 
 class Bureaucrat
@@ -54,7 +57,9 @@ class Bureaucrat
 
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &b);
 
+
 //---------------   colors   ---------------//
+
 # define RED			"\x1B[31m"
 # define GREEN			"\x1B[32m"
 # define YELLOW			"\x1B[33m"
