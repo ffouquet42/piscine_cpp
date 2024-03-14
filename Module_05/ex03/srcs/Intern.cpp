@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 00:35:21 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/13 02:41:59 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/14 22:56:35 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ AForm	*Intern::makeForm(std::string name, std::string target)
 			id = i;
 	if (id == -1)
 		return (std::cout << RED << "Invalid name" << WHITE << std::endl, newForm); // color
-	return (std::cout << GREEN << "Intern creates " << form_list[id] << WHITE << std::endl, f[id](target)); // color
+	return (std::cout << BLUE << "Intern creates " << form_list[id] << WHITE << std::endl, f[id](target)); // color
 
 	// return (id == -1) ? (std::cout << RED << "Invalid name" << WHITE << std::endl, nullptr) : (std::cout << GREEN << "Intern creates " << form_list[id] << WHITE << std::endl, f[id](target);
 }
