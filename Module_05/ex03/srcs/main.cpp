@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:09 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/14 23:16:30 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/15 00:06:04 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int main(void)
 
 		delete F;
 		
+		
 		std::cout << YELLOW << "\nTest #007 : Intern try to make form <robotomi request>" << WHITE << std::endl;
 		intern.makeForm("robotomi request", "robot");
 		
@@ -59,6 +60,7 @@ int main(void)
 		A.executeForm(*G);
 
 		delete G;
+
 
 		std::cout << YELLOW << "\nTest #011 : Intern try to make form <prezidential pardon>" << WHITE << std::endl;
 		intern.makeForm("prezidential pardon", "pardon");
@@ -81,8 +83,6 @@ int main(void)
 	} catch(Bureaucrat::GradeTooLowException &e) {
 		std::cout << MAGENTA << e.tooLow() << WHITE << std::endl;
 	}
-
-	// Try : Intern try to create form with invalid name
 
 	return (0);
 }
