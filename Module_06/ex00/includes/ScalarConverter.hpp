@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 18:19:39 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/15 18:25:38 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/15 21:50:57 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 //---------------   includes   ---------------//
 # include <iostream>
-// # include <string>
-// # include <cstdlib>
-// # include <cfloat>
-// # include <sstream>
-// # include <iomanip>
-// # include <cmath>
+# include <string>
+# include <cstdlib>
+# include <cfloat>
+# include <sstream>
+# include <iomanip>
+# include <cmath>
+// check if all is usefull
+
+int is_number(char c); // recoder avec autre nom?
 
 
 //---------------   class   ---------------//
