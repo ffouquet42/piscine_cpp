@@ -6,17 +6,20 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:14 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/07 12:13:34 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/18 15:12:03 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 //---------------   includes   ---------------//
+
 # include <iostream>
 # include <exception>
 
+
 //---------------   class   ---------------//
+
 class Bureaucrat
 {
 	public:
@@ -48,7 +51,9 @@ class Bureaucrat
 
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &cpy);
 
+
 //---------------   colors   ---------------//
+
 # define RED			"\x1B[31m"
 # define GREEN			"\x1B[32m"
 # define YELLOW			"\x1B[33m"
