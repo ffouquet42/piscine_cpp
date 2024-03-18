@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:14 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 23:49:05 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/18 17:50:08 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Bureaucrat
 {
 	public:
 		Bureaucrat(const std::string name, int grade);
-		~Bureaucrat(); // virtual ?
+		~Bureaucrat();
 		Bureaucrat(const Bureaucrat &cpy);
 		Bureaucrat &operator=(const Bureaucrat &cpy);
 

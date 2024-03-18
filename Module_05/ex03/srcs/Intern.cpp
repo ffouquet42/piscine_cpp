@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 00:35:21 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/14 22:56:35 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/18 17:52:15 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,22 +42,22 @@ Intern	&Intern::operator=(const Intern &cpy)
 
 AForm	*newShrubbery(std::string target)
 {
-	return (new ShrubberyCreationForm(target)); // new? leaks? delete?
+	return (new ShrubberyCreationForm(target));
 }
 
 AForm	*newRobotomy(std::string target)
 {
-	return (new RobotomyRequestForm(target)); // new? leaks? delete?
+	return (new RobotomyRequestForm(target));
 }
 
 AForm	*newPresidential(std::string target)
 {
-	return (new PresidentialPardonForm(target)); // new? leaks? delete?
+	return (new PresidentialPardonForm(target));
 }
 
 AForm	*Intern::makeForm(std::string name, std::string target)
 {
-	AForm *newForm = NULL;
+	AForm *new_form = NULL;
 	AForm *(*f[3])(std::string target) = { &newShrubbery, &newRobotomy, &newPresidential };
 	std::string form_list[3] = { "shrubbery creation", "robotomy request", "presidential pardon" };
 	int id = -1;
@@ -66,8 +66,6 @@ AForm	*Intern::makeForm(std::string name, std::string target)
 		if (form_list[i] == name)
 			id = i;
 	if (id == -1)
-		return (std::cout << RED << "Invalid name" << WHITE << std::endl, newForm); // color
-	return (std::cout << BLUE << "Intern creates " << form_list[id] << WHITE << std::endl, f[id](target)); // color
-
-	// return (id == -1) ? (std::cout << RED << "Invalid name" << WHITE << std::endl, nullptr) : (std::cout << GREEN << "Intern creates " << form_list[id] << WHITE << std::endl, f[id](target);
+		return (std::cout << RED << "Invalid name" << WHITE << std::endl, new_form);
+	return (std::cout << BLUE << "Intern creates " << form_list[id] << WHITE << std::endl, f[id](target));
 }

@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 21:22:59 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 23:49:28 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/18 17:50:22 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class PresidentialPardonForm : public AForm
 {
 	public:
 		PresidentialPardonForm(std::string target);
-		~PresidentialPardonForm(); // virtual ?
+		~PresidentialPardonForm();
 		PresidentialPardonForm(const PresidentialPardonForm &cpy);
 		PresidentialPardonForm &operator=(const PresidentialPardonForm &cpy);
 
