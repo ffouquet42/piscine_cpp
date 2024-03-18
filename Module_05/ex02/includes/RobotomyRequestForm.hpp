@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 21:23:02 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 23:49:24 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/18 17:41:54 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class RobotomyRequestForm : public AForm
 {
 	public:
 		RobotomyRequestForm(std::string target);
-		~RobotomyRequestForm(); // virtual ?
+		~RobotomyRequestForm();
 		RobotomyRequestForm(const RobotomyRequestForm &cpy);
 		RobotomyRequestForm &operator=(const RobotomyRequestForm &cpy);
 

@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 12:32:00 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 23:49:11 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/18 17:40:44 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ class AForm
 		
 		void			beSigned(Bureaucrat &b);
 		virtual bool	execute(Bureaucrat &b) const = 0;
-		// void			execute_check(Bureaucrat &b) const; // useless ?
 
 	private:
 		const std::string	_name;

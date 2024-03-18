@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 21:23:04 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/12 23:49:19 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/18 17:42:01 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class ShrubberyCreationForm : public AForm
 {
 	public:
 		ShrubberyCreationForm(std::string target);
-		~ShrubberyCreationForm(); // virtual ?
+		~ShrubberyCreationForm();
 		ShrubberyCreationForm(const ShrubberyCreationForm &cpy);
 		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &cpy);
 

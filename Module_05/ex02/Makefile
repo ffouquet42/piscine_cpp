@@ -14,7 +14,7 @@ RM			=	rm -f
 
 FLAGS		=	-Wall -Werror -Wextra -std=c++98
 
-NAME		=	prog
+NAME		=	aform
 
 all:		$(NAME)
 
