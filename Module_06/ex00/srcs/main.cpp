@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 21:43:33 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/19 21:49:39 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/19 22:27:15 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	invalid_common_form(std::string str)
 {
-	if ((str[0] && !str[1]) || str == "-inff" || str == "+inff" || str == "-inf" || str == "+inf" || str == "nan")
+	if ((str[0] && !str[1]) || str == "-inff" || str == "nanf" || str == "+inff" || str == "-inf" || str == "+inf" || str == "nan")
 		return (0);
 		
 	int	dot = 0;

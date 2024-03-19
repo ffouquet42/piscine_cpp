@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 18:19:41 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/19 21:57:37 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/19 22:36:29 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,27 +27,27 @@ int	is_number(char c)
 	return (c >= '0' && c <= '9');
 }
 
-void	display_char(const char *str, double floating_point_nb)
+void	display_char(const char *str, double str_as_double)
 {
 	std::cout << BLUE << "\nChar  : " << WHITE;
 	if (str && str[0] && !str[1] && !is_number(str[0]))
 		std::cout << "\'" << str[0] << "\'";
-	else if (floating_point_nb <= 31 && floating_point_nb >= 0)
+	else if (str_as_double <= 31 && str_as_double >= 0)
 		std::cout << "Non displayable";
-	else if (floating_point_nb < 0 || floating_point_nb >= 127 || !(floating_point_nb >= 0 || floating_point_nb <= 0))
+	else if (str_as_double < 0 || str_as_double >= 127 || !(str_as_double >= 0 || str_as_double <= 0))
 		std::cout << "Impossible";
 	else
-		std::cout << "\'" << static_cast<char>(floating_point_nb) << "\'";
+		std::cout << "\'" << static_cast<char>(str_as_double) << "\'";
 	std::cout << std::endl;
 }
 
-void	display_int(const char *str, double floating_point_nb)
+void	display_int(const char *str, double str_as_double)
 {
 	std::cout << BLUE << "Int   : " << WHITE;
-	int	res = static_cast<int>(floating_point_nb);
-	if (!(floating_point_nb >= 0 || floating_point_nb <= 0))
+	int	res = static_cast<int>(str_as_double);
+	if (!(str_as_double >= 0 || str_as_double <= 0))
 		std::cout << "Impossible";
-	else if (floating_point_nb < -2147483648 || floating_point_nb > 2147483647)
+	else if (str_as_double < -2147483648 || str_as_double > 2147483647)
 		std::cout << "Impossible";
 	else if (str && str[0] && !is_number(str[0]) && !str[1])
 		std::cout << static_cast<int>(str[0]);
@@ -56,33 +56,34 @@ void	display_int(const char *str, double floating_point_nb)
 	std::cout << std::endl;
 }
 
-void	display_float(const char *str, double floating_point_nb)
+void	display_float(const char *str, double str_as_double)
 {
-	float	valueFloat = static_cast<float>(floating_point_nb);
 	std::cout << BLUE << "Float : " << WHITE;
 	if (str && str[0] && !is_number(str[0]) && !str[1])
-		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(str[0]);
+		std::cout << BLUE << std::fixed << std::setprecision(1) << static_cast<float>(str[0]) << "f" << WHITE << std::endl;
 	else
-		std::cout << std::fixed << std::setprecision(1) << valueFloat;
-	std::cout << "f" << std::endl;
+		std::cout << BLUE << std::fixed << std::setprecision(1) << static_cast<float>(str_as_double) << "f" << WHITE << std::endl;
 }
 
-void	display_double(const char *str, double floating_point_nb)
+void	display_double(const char *str, double str_as_double)
 {
 	std::cout << BLUE << "Double: " << WHITE;
 	if (str && str[0] && !is_number(str[0]) && !str[1])
 		std::cout << BLUE << std::fixed << std::setprecision(1) << static_cast<double>(str[0]) << WHITE << std::endl << std::endl;
 	else
-		std::cout << BLUE << std::fixed << std::setprecision(1) << floating_point_nb << WHITE << std::endl << std::endl;
+		std::cout << BLUE << std::fixed << std::setprecision(1) << str_as_double << WHITE << std::endl << std::endl;
 }
 
 void	ScalarConverter::convert(std::string str)
 {
-	const char *new_str = str.c_str();
-	double floating_point_nb = std::strtod(new_str, 0);
+	const char *str_as_char = str.c_str();
+	double str_as_double = std::strtod(str_as_char, 0);
 
-	display_char(new_str, floating_point_nb);
-	display_int(new_str, floating_point_nb);
-	display_float(new_str, floating_point_nb);
-	display_double(new_str, floating_point_nb);
+	std::cout << MAGENTA << "str = " << str_as_char << WHITE << std::endl;
+	std::cout << MAGENTA << "nb  = " << str_as_double << WHITE << std::endl;
+
+	display_char(str_as_char, str_as_double);
+	display_int(str_as_char, str_as_double);
+	display_float(str_as_char, str_as_double);
+	display_double(str_as_char, str_as_double);
 }
