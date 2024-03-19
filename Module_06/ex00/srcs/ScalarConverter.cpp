@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 18:19:41 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/19 22:54:34 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/19 23:02:19 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ int	is_number(char c)
 void	display_char(const char *str, double str_as_double)
 {
 	std::cout << BLUE << "\nChar  : " << WHITE;
-	if (str && str[0] && !is_number(str[0]) && !str[1])
+	if (str && str[0] && !is_number(str[0]) && !str[1]) // une lettre + 3x en bas
 		std::cout << BLUE << "\'" << str[0] << "\'" << WHITE << std::endl;
 	else if (str_as_double < 32 && str_as_double >= 0)
 		std::cout << CYAN << "Non displayable" << WHITE << std::endl;
-	else if (str_as_double < 0 || str_as_double >= 127 || !(str_as_double >= 0 || str_as_double <= 0))
+	else if (str_as_double < 0 || str_as_double >= 127 || !(str_as_double >= 0 || str_as_double <= 0)) // nan + 1x en bas
 		std::cout << CYAN << "Impossible" << WHITE << std::endl;
 	else
 		std::cout << BLUE << "\'" << static_cast<char>(str_as_double) << "\'" << WHITE << std::endl;
