@@ -6,13 +6,14 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 18:19:39 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/15 21:50:57 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/19 20:58:50 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 //---------------   includes   ---------------//
+
 # include <iostream>
 # include <string>
 # include <cstdlib>
@@ -20,23 +21,22 @@
 # include <sstream>
 # include <iomanip>
 # include <cmath>
-// check if all is usefull
-
-int is_number(char c); // recoder avec autre nom?
 
 
 //---------------   class   ---------------//
+
 class ScalarConverter
 {
 	public:
 		static void convert(std::string str);
 		
 	private:
-		ScalarConverter(); // private?
+		ScalarConverter();
 };
 
 
 //---------------   colors   ---------------//
+
 # define RED			"\x1B[31m"
 # define GREEN			"\x1B[32m"
 # define YELLOW			"\x1B[33m"

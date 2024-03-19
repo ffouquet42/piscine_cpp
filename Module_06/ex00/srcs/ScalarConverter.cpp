@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 18:19:41 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/15 21:45:59 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/19 21:57:37 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,14 @@ ScalarConverter::ScalarConverter()
 
 //---------------   Functions   ---------------//
 
+int	is_number(char c)
+{
+	return (c >= '0' && c <= '9');
+}
+
 void	display_char(const char *str, double floating_point_nb)
 {
-	std::cout << "char: ";
+	std::cout << BLUE << "\nChar  : " << WHITE;
 	if (str && str[0] && !str[1] && !is_number(str[0]))
 		std::cout << "\'" << str[0] << "\'";
 	else if (floating_point_nb <= 31 && floating_point_nb >= 0)
@@ -38,8 +43,7 @@ void	display_char(const char *str, double floating_point_nb)
 
 void	display_int(const char *str, double floating_point_nb)
 {
-	std::cout << "int: ";
-
+	std::cout << BLUE << "Int   : " << WHITE;
 	int	res = static_cast<int>(floating_point_nb);
 	if (!(floating_point_nb >= 0 || floating_point_nb <= 0))
 		std::cout << "Impossible";
@@ -55,7 +59,7 @@ void	display_int(const char *str, double floating_point_nb)
 void	display_float(const char *str, double floating_point_nb)
 {
 	float	valueFloat = static_cast<float>(floating_point_nb);
-	std::cout << "float: ";
+	std::cout << BLUE << "Float : " << WHITE;
 	if (str && str[0] && !is_number(str[0]) && !str[1])
 		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(str[0]);
 	else
@@ -65,12 +69,11 @@ void	display_float(const char *str, double floating_point_nb)
 
 void	display_double(const char *str, double floating_point_nb)
 {
-	std::cout << "double: ";
+	std::cout << BLUE << "Double: " << WHITE;
 	if (str && str[0] && !is_number(str[0]) && !str[1])
-		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(str[0]);
+		std::cout << BLUE << std::fixed << std::setprecision(1) << static_cast<double>(str[0]) << WHITE << std::endl << std::endl;
 	else
-		std::cout << std::fixed << std::setprecision(1) << floating_point_nb;
-	std::cout << std::endl;
+		std::cout << BLUE << std::fixed << std::setprecision(1) << floating_point_nb << WHITE << std::endl << std::endl;
 }
 
 void	ScalarConverter::convert(std::string str)
