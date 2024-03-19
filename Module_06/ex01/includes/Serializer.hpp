@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 21:57:50 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/15 23:06:19 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/19 23:17:25 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@
 
 struct Data
 {
-	int i;
-	double d;
-	std::string s;
+	int data_int;
+	double data_double;
+	std::string data_str;
 };
 
 
