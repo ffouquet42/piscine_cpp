@@ -6,14 +6,11 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 17:18:57 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/20 00:14:39 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/20 00:48:35 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Base.hpp"
-#include "../includes/A.hpp"
-#include "../includes/B.hpp"
-#include "../includes/C.hpp"
 
 Base *generate(void)
 {

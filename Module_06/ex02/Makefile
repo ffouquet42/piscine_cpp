@@ -1,8 +1,5 @@
 SRCS		=	srcs/main.cpp	\
 				srcs/Base.cpp	\
-				srcs/A.cpp		\
-				srcs/B.cpp		\
-				srcs/C.cpp		\
 
 OBJS		=	$(SRCS:.cpp=.o)
 

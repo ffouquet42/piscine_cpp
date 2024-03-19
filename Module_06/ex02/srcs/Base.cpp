@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 17:18:51 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/20 00:14:08 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/20 00:47:22 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,4 @@
 
 //---------------   Constructors & Destructors   ---------------//
 
-Base::Base()
-{
-	std::cout << GREEN << "++ Base default constructor called" << WHITE << std::endl;
-}
-
-Base::~Base()
-{
-	std::cout << RED << "-- Base default destructor called" << WHITE << std::endl;
-}
+Base::~Base() {}

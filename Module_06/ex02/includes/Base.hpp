@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 17:18:39 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/20 00:13:45 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/20 00:49:05 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,16 @@
 class Base
 {
 	public:
-		Base();
 		virtual ~Base();
 
 	private:
 };
+
+class A : public Base {};
+
+class B : public Base {};
+
+class C : public Base {};
 
 
 //---------------   colors   ---------------//
