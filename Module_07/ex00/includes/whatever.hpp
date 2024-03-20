@@ -6,17 +6,19 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 22:26:52 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/17 22:31:07 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/20 01:31:06 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 //---------------   includes   ---------------//
+
 # include <iostream>
 
 
 //---------------   templates   ---------------//
+
 template <typename T> void swap(T &a, T &b)
 {
 	T c = a;
@@ -36,6 +38,7 @@ template <typename T> T max(T a, T b)
 
 
 //---------------   colors   ---------------//
+
 # define RED			"\x1B[31m"
 # define GREEN			"\x1B[32m"
 # define YELLOW			"\x1B[33m"
