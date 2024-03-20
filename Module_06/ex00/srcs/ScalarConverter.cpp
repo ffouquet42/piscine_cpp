@@ -6,11 +6,26 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 18:19:41 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/20 20:14:56 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/20 20:29:55 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ScalarConverter.hpp"
+
+//---------------   Constructors & Destructors   ---------------//
+
+ScalarConverter::ScalarConverter() {}
+
+ScalarConverter::~ScalarConverter() {}
+
+ScalarConverter::ScalarConverter(const ScalarConverter &cpy) { (void)cpy; }
+
+ScalarConverter	&ScalarConverter::operator=(const ScalarConverter &cpy)
+{
+	(void)cpy;
+	return *this;
+}
+
 
 //---------------   Functions   ---------------//
 

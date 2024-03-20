@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 21:57:50 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/19 23:17:25 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/20 20:23:21 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,16 @@ struct Data
 class Serializer
 {
 	public:
+		Serializer();
+		~Serializer();
+		Serializer(const Serializer &cpy);
+		Serializer &operator=(const Serializer &cpy);
+		
 		static uintptr_t serialize(Data *ptr);
 		static Data *deserialize(uintptr_t raw);
 		
 	private:
-		Serializer();
+		
 };
 
 

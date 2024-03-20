@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 18:19:39 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/20 20:14:47 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/20 20:29:28 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@
 class ScalarConverter
 {
 	public:
+		ScalarConverter();
+		~ScalarConverter();
+		ScalarConverter(const ScalarConverter &cpy);
+		ScalarConverter &operator=(const ScalarConverter &cpy);
+
 		static void convert(std::string str);
 		
 	private:
