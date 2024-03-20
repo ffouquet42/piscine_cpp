@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 18:19:39 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/19 20:58:50 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/20 20:14:47 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ class ScalarConverter
 		static void convert(std::string str);
 		
 	private:
-		ScalarConverter();
 };
 
 
