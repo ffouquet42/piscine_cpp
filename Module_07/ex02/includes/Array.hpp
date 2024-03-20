@@ -6,24 +6,26 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:27:11 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/18 02:30:55 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/20 13:16:11 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 //---------------   includes   ---------------//
+
 # include <iostream>
 
 
-//---------------   templates   ---------------// + class ?
+//---------------   templates   ---------------//
+
 template <typename T>
 class Array
 {
 	public:
 		Array() : _arr(new T[0]), _len(0) {}
-		Array(int n) : _arr(new T[n]), _len(n) {
-			for (int i = 0; i < n; i++)
+		Array(unsigned int n) : _arr(new T[n]), _len(n) {
+			for (unsigned int i = 0; i < n; i++)
 				_arr[i] = 0;
 		}
 		Array(Array const &cpy) : _arr(new T[cpy._len]), _len(cpy._len) {
@@ -65,6 +67,7 @@ class Array
 
 
 //---------------   colors   ---------------//
+
 # define RED			"\x1B[31m"
 # define GREEN			"\x1B[32m"
 # define YELLOW			"\x1B[33m"
