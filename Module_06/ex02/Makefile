@@ -9,7 +9,7 @@ RM			=	rm -f
 
 FLAGS		=	-Wall -Werror -Wextra -std=c++98
 
-NAME		=	prog
+NAME		=	identify
 
 all:		$(NAME)
 

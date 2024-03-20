@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 17:18:57 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/20 00:48:35 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/20 01:21:03 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Base *generate(void)
 
 	srand(time(NULL));
 	int random_number = rand() % 3;
-	std::cout << CYAN << "random number: " << random_number << WHITE << std::endl;
+	std::cout << CYAN << "Random number: " << random_number << WHITE << std::endl;
 
 	switch (random_number)
 	{
@@ -46,6 +46,8 @@ void identify(Base *p)
 		std::cout << BLUE << "Identify(Base *p): B" << WHITE << std::endl;
 	else if (dynamic_cast<C *>(p))
 		std::cout << BLUE << "Identify(Base *p): C" << WHITE << std::endl;
+	else
+		std::cout << RED << "Identify(Base *p): NULL" << WHITE << std::endl;
 }
 
 void identify(Base &p)
@@ -64,7 +66,7 @@ void identify(Base &p)
 		(void)dynamic_cast<C &>(p);
 		std::cout << BLUE << "Identify(Base &p): C" << WHITE << std::endl;
 		return;
-	} catch(const std::exception &e) {}
+	} catch(const std::exception &e) { std::cout << RED << "Identify(Base &p): NULL" << WHITE << std::endl; }
 }
 
 int main(void)
