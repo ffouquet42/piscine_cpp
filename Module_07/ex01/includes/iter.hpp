@@ -6,13 +6,14 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 22:26:52 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/18 00:14:15 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/20 03:12:54 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 //---------------   includes   ---------------//
+
 # include <iostream>
 
 
@@ -31,6 +32,7 @@ template <typename T> void iter(T *arr, int size, void (*f)(T&))
 
 
 //---------------   colors   ---------------//
+
 # define RED			"\x1B[31m"
 # define GREEN			"\x1B[32m"
 # define YELLOW			"\x1B[33m"
