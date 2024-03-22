@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/21 03:10:43 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/21 03:28:36 by fllanet          ###   ########.fr       */
+/*   Created: 2024/03/07 12:32:00 by fllanet           #+#    #+#             */
+/*   Updated: 2024/03/22 23:46:16 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@
 # include <vector>
 
 
-//---------------   templates   ---------------//
+//---------------   templates   ---------------// Voir comments les containers standars fonctionnent + containers associatifs
 
 template<typename T>
 typename T::iterator easyfind(T &container, int value)
 {
-	typename T::iterator it = std::find(container.begin(), container.end(), value);
+	typename T::iterator it = std::find(container.begin(), container.end(), value); // STL algorithm?
 	if (it == container.end())
-		throw std::out_of_range("Invalid");
+		throw std::out_of_range("=> Value not found");
 	return (it);
 }
 
