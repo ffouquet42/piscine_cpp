@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/21 03:39:37 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/21 03:48:14 by fllanet          ###   ########.fr       */
+/*   Created: 2024/03/02 15:28:14 by fllanet           #+#    #+#             */
+/*   Updated: 2024/03/23 00:48:39 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,40 +14,8 @@
 
 //---------------   includes   ---------------//
 
-# include <iostream>
-# include <stdexcept>
-# include <algorithm>
-# include <vector>
 
-
-//---------------   class   ---------------//
-
-class Span
-{
-	public:
-		// Span();
-		Span(int n);
-		virtual ~Span(); // virtual?
-		Span(Span const &cpy);
-		Span operator=(Span const &cpy);
-
-		class InvalidSpan : public std::exception {
-			public:
-				const char *what() const throw();
-		};
-
-		void	addNumber(int n);
-		void	addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
-
-		int		shortestSpan();
-		int		longestSpan(); //
-
-		std::vector<int>	getData();
-
-	private:
-		std::vector<int>	_data;
-		int					_size;
-};
+//---------------   ???   ---------------//
 
 
 //---------------   colors   ---------------//
