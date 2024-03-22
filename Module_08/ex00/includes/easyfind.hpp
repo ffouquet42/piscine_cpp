@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 12:32:00 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/22 23:49:32 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/23 00:28:42 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@
 # include <vector>
 
 
-//---------------   templates   ---------------// Voir comments les containers standars fonctionnent + containers associatifs
+//---------------   templates   ---------------//
 
 template<typename T>
 typename T::iterator easyfind(T &container, int value)
 {
-	typename T::iterator it = std::find(container.begin(), container.end(), value); // STL algorithm?
+	typename T::iterator it = std::find(container.begin(), container.end(), value);
 	if (it == container.end())
 		throw std::out_of_range("=> Value not found");
 	return (it);
