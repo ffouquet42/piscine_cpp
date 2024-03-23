@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:09 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/23 23:42:06 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/23 23:43:58 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,6 @@ int main()
 		std::cout << GREEN << "mstack.top() = " << mstack.top() << WHITE << std::endl;
 		std::cout << GREEN << "mstack.size() = " << mstack.size() << WHITE << std::endl;
 		
-		
 		std::cout << YELLOW << "\nTest #004 - iterator" << WHITE << std::endl;
 		for (MutantStack<int>::iterator it = mstack.begin(); it != mstack.end(); it++)
 			std::cout << GREEN << "*it = " << *it << WHITE << std::endl;
@@ -122,18 +121,6 @@ int main()
 
 		std::cout << YELLOW << "\nTest #005 - const_iterator" << WHITE << std::endl;
 		for (MutantStack<int>::const_iterator it = mstack.begin(); it != mstack.end(); it++)
-			std::cout << GREEN << "*it = " << *it << WHITE << std::endl;
-		std::cout << std::endl;
-		
-		std::cout << YELLOW << "\nTest #006 - copy" << WHITE << std::endl;
-		MutantStack<int> s1(mstack);
-		for (MutantStack<int>::iterator it = s1.begin(); it != s1.end(); it++)
-			std::cout << GREEN << "*it = " << *it << WHITE << std::endl;
-		std::cout << std::endl;
-
-		std::cout << YELLOW << "\nTest #007 - &operator=" << WHITE << std::endl;
-		MutantStack<int> s2 = s1;
-		for (MutantStack<int>::iterator it = s2.begin(); it != s2.end(); it++)
 			std::cout << GREEN << "*it = " << *it << WHITE << std::endl;
 		std::cout << std::endl;
 	}
