@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:14 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/23 05:09:20 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/23 23:21:39 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,39 @@
 //---------------   includes   ---------------//
 
 # include <iostream>
+# include <stdexcept>
+# include <algorithm>
+# include <vector>
 # include <stack>
+# include <list>
 
 
 //---------------   templates   ---------------//
 
+template <typename T>
+class MutantStack : public std::stack<T>
+{
+	public:
+		MutantStack() {};
+		~MutantStack() {};
+		MutantStack(MutantStack const &cpy) : MutantStack::stack(cpy) {}
+		MutantStack &operator=(const MutantStack &cpy)
+		{
+			if (this != &cpy)
+				std::stack<T>::operator=(cpy);
+			return (*this);
+		}
 
+		typedef typename std::stack<T>::container_type::iterator		iterator;
+		typedef typename std::stack<T>::container_type::const_iterator	const_iterator;
+		
+		iterator		begin()			{ return (this->c.begin()); }
+		const_iterator	begin() const	{ return (this->c.begin()); }
+		iterator		end()			{ return (this->c.end()); }
+		const_iterator	end() 	const	{ return (this->c.end()); }
+
+	private:	
+};
 
 
 //---------------   colors   ---------------//

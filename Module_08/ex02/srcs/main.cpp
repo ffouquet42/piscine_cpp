@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:09 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/23 05:09:40 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/23 23:19:57 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,71 @@
 
 int main()
 {
-	
+	{
+		std::cout << YELLOW << "\nTest #001 - Subject Tests with MutantStack" << WHITE << std::endl;
 
+		MutantStack<int> mstack;
+		std::cout << BLUE << "Create mstack" << WHITE << std::endl;
+		mstack.push(5);
+		std::cout << BLUE << "Push 5" << WHITE << std::endl;
+		mstack.push(17);
+		std::cout << BLUE << "Push 17" << WHITE << std::endl;
+		std::cout << GREEN << "mstack.top() = " << mstack.top() << WHITE << std::endl;
+		mstack.pop();
+		std::cout << BLUE << "mstack.pop()" << WHITE << std::endl;
+		std::cout << GREEN << "mstack.size() = " << mstack.size() << WHITE << std::endl;
+		mstack.push(3);
+		std::cout << BLUE << "Push 3" << WHITE << std::endl;
+		mstack.push(5);
+		std::cout << BLUE << "Push 5" << WHITE << std::endl;
+		mstack.push(737);
+		std::cout << BLUE << "Push 737" << WHITE << std::endl;
+		mstack.push(0);
+		std::cout << BLUE << "Push 0" << WHITE << std::endl;
+		
+		MutantStack<int>::iterator it = mstack.begin();
+		MutantStack<int>::iterator ite = mstack.end();
+		++it;
+		--it;
+		while (it != ite)
+		{
+			std::cout << GREEN << "*it = " << *it << WHITE << std::endl;
+			++it;
+		}
+		std::stack<int> s(mstack);
+	}
+
+	{
+		std::cout << YELLOW << "\nTest #002 - Subject Tests with std::list" << WHITE << std::endl;
+		
+		std::list<int> mlist;
+		std::cout << BLUE << "Create mlist" << WHITE << std::endl;
+		mlist.push_back(5);
+		std::cout << BLUE << "Push 5" << WHITE << std::endl;
+		mlist.push_back(17);
+		std::cout << BLUE << "Push 17" << WHITE << std::endl;
+		std::cout << GREEN << "mlist.top() = " << mlist.back() << WHITE << std::endl;
+		mlist.pop_back();
+		std::cout << BLUE << "mlist.pop()" << WHITE << std::endl;
+		std::cout << GREEN << "mlist.size() = " << mlist.size() << WHITE << std::endl;
+		mlist.push_back(3);
+		std::cout << BLUE << "Push 3" << WHITE << std::endl;
+		mlist.push_back(5);
+		std::cout << BLUE << "Push 5" << WHITE << std::endl;
+		mlist.push_back(737);
+		std::cout << BLUE << "Push 737" << WHITE << std::endl;
+		mlist.push_back(0);
+		std::cout << BLUE << "Push 0" << WHITE << std::endl;
+		
+		std::list<int>::iterator it = mlist.begin();
+		std::list<int>::iterator ite = mlist.end();
+		++it;
+		--it;
+		while (it != ite) {
+			std::cout << GREEN << "*it = " << *it << WHITE << std::endl;
+			++it;
+		}
+	}
+	
 	return (0);
 }

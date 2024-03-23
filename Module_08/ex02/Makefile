@@ -1,5 +1,4 @@
-SRCS		=	srcs/main.cpp			\
-				srcs/MutantStack.cpp	\
+SRCS		=	srcs/main.cpp	\
 
 OBJS		=	$(SRCS:.cpp=.o)
 
@@ -9,7 +8,7 @@ RM			=	rm -f
 
 FLAGS		=	-Wall -Werror -Wextra -std=c++98
 
-NAME		=	prog
+NAME		=	mutantstack
 
 all:		$(NAME)
 
