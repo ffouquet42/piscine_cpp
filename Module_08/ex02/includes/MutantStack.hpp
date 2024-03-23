@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/21 05:13:54 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/21 05:16:31 by fllanet          ###   ########.fr       */
+/*   Created: 2024/03/02 15:28:14 by fllanet           #+#    #+#             */
+/*   Updated: 2024/03/23 05:09:20 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,32 +18,9 @@
 # include <stack>
 
 
-//---------------   class   ---------------//
+//---------------   templates   ---------------//
 
-template <typename T>
-class MutantStack : public std::stack<T> {
-	private:
 
-	public:
-		MutantStack() 			{};
-		MutantStack(MutantStack const &obj) : MutantStack::stack(obj) {}
-		virtual ~MutantStack()	{};
-
-		MutantStack	&operator=(MutantStack const &rhs) {
-			if (this != &rhs) {
-				std::stack<T>::operator=(rhs);
-			}
-			return (*this);
-		}
-
-		typedef typename std::stack<T>::container_type::iterator 		iterator;
-		typedef typename std::stack<T>::container_type::const_iterator	const_iterator;
-
-		iterator		begin()				{ return(this->c.begin()); }
-		const_iterator	begin()	const		{ return(this->c.begin()); }
-		iterator		end()				{ return(this->c.end()); }
-		const_iterator	end() const			{ return(this->c.end()); }
-};
 
 
 //---------------   colors   ---------------//
