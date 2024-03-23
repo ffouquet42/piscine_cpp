@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:14 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/23 00:48:39 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/23 04:35:32 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,47 @@
 
 //---------------   includes   ---------------//
 
+# include <iostream>
+# include <stdexcept>
+# include <algorithm>
+# include <vector>
 
-//---------------   ???   ---------------//
+
+//---------------   class   ---------------//
+
+class Span
+{
+	public:
+		Span();
+		Span(unsigned int max);
+		~Span();
+		Span(const Span &cpy);
+		Span &operator=(const Span &cpy);
+
+		void	addNumber(unsigned int n);
+		void	addNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end);
+
+		unsigned int	shortestSpan();
+		unsigned int	longestSpan();
+
+		class SpanIsFull : public std::exception {
+			public:
+				const char *what() const throw() {
+					return ("=> Span: Is full");
+				};
+		};
+		
+		class NotEnoughNumbers : public std::exception {
+			public:
+				const char *what() const throw() {
+					return ("=> Span: Not enough numbers");
+				};
+		};
+
+	private:
+		std::vector<int>	_vec;
+		unsigned int		_max;
+};
 
 
 //---------------   colors   ---------------//
