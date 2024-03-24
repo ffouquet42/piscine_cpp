@@ -15,11 +15,10 @@
 //---------------   includes   ---------------//
 
 #include <iostream>
-#include <fstream>
-#include <sstream>
-#include <string>
-#include <map>
+#include <stack>
 #include <algorithm>
+#include <exception>
+#include <stdlib.h> 
 
 
 //---------------   class   ---------------//
@@ -31,10 +30,14 @@ class RPN {
 		RPN(const RPN &cpy);	
 		RPN	&operator=(const RPN &cpy);
 
-		
+		void	calcul(const std::string &input);
 		
 	private:
+		std::stack<int>		_stack;
 		
+		bool	_is_valid_char(char c);
+		bool	_is_operator(char c);
+		void	_stack_operation(char sign);
 };
 
 
