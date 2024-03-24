@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:09 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/24 01:39:20 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/24 02:09:36 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ BitcoinExchange	&BitcoinExchange::operator=(const BitcoinExchange &cpy)
 {
 	if (this != &cpy)
 		*this = cpy;
-	return *this;
+	return (*this);
 }
 
 
 //---------------   Functions   ---------------//
 
-int	BitcoinExchange::loadDataBase()
+int	BitcoinExchange::loadDatabase()
 {
 	std::ifstream	data("data.csv");
 	if (!data.is_open())
@@ -52,7 +52,7 @@ int	BitcoinExchange::loadDataBase()
 		float				value;
 		if (std::getline(iss, date, ',') && (iss >> value))
 		{
-			dataBase[date] = value;
+			_database[date] = value;
 		}
 		else
 		{
@@ -65,7 +65,7 @@ int	BitcoinExchange::loadDataBase()
 	return (0);
 }
 
-int		BitcoinExchange::checkDateFormat(std::string &date)
+int	BitcoinExchange::checkDateFormat(std::string &date)
 {
 	int		year;
 	int		month;
@@ -77,13 +77,24 @@ int		BitcoinExchange::checkDateFormat(std::string &date)
 	data_stream >> year >> dash_1 >> month >> dash_2 >> day;
 	if (data_stream.fail() || dash_1 != '-' || dash_2 != '-')
 		return (1);
-	return ((year >= 2009 && year <= 2050) && (month >= 1 && month <= 12) && (day >= 1 && day <= 31));
+
+    if (year < 2009 || year > 2050 || month < 1 || month > 12 || day < 1 || day > 31)
+        return (1);
+
+    // bool is_leap = (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
+    // int max_day_in_month[] = {31, 28 + is_leap, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+    // if (day > max_day_in_month[month - 1])
+    //     return (1);
+
+    return (0);
 }
 
-float	BitcoinExchange::parseInputLine(std::string &input)
+float	BitcoinExchange::readInput(std::string &input)
 {
 	if (input.empty())
 		return (-1);
+
 	std::istringstream	iss(input);
 	std::string	date, value_str;
 	std::getline(iss, date, '|');
@@ -92,7 +103,7 @@ float	BitcoinExchange::parseInputLine(std::string &input)
 	date.erase(date.find_last_not_of(" \t") + 1);
 	input = date;
 	float value;
-	if (!checkDateFormat(input))
+	if (checkDateFormat(input))
 	{
 		std::cout << "Error: bad input => " << input << std::endl;
 		return (-1);
@@ -113,7 +124,7 @@ float	BitcoinExchange::parseInputLine(std::string &input)
 	return (value);
 }
 
-void	BitcoinExchange::calculateRatio(std::ifstream &input)
+void	BitcoinExchange::calculBtcValue(std::ifstream &input)
 {
 	std::string line;
 	std::getline(input, line);
@@ -121,15 +132,15 @@ void	BitcoinExchange::calculateRatio(std::ifstream &input)
 	{
 		std::istringstream iss(line);
 		float value;
-		value = parseInputLine(line);
+		value = readInput(line);
 		if (value == -1)
 			continue ;
-		std::map<std::string, float>::iterator it = dataBase.lower_bound(line);
+		std::map<std::string, float>::iterator it = _database.lower_bound(line);
 		if (it->first == line)
 		{
 			std::cout << line << " => " << value << " = " << value * it->second << std::endl;
 		}
-		else if (it == dataBase.begin()) {
+		else if (it == _database.begin()) {
 			std::cout << line << " => " << value << " = " << value * it->second << std::endl;
 		}
 		else {
