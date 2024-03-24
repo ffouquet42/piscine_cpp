@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:09 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/24 04:37:30 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/24 07:39:12 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int main(int argc, char **argv)
 	BitcoinExchange btc;
 	btc.load_database();
 	btc.calcul_btc_value(in);
-
+	in.close();
 	return (0);
 }
