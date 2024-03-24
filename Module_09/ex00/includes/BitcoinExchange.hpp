@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:14 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/24 01:00:27 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/24 01:37:51 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <string>
 #include <map>
-#include <string> //
-#include <algorithm> //
+#include <algorithm>
 
 
 //---------------   class   ---------------//
@@ -32,7 +32,7 @@ class BitcoinExchange {
 		BitcoinExchange	&operator=(const BitcoinExchange &cpy);
 
 		int		loadDataBase();
-		int		isValidDate(std::string &date);
+		int		checkDateFormat(std::string &date);
 		float	parseInputLine(std::string &input);
 		void	calculateRatio(std::ifstream &input);
 		
