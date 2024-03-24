@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:09 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/24 00:35:40 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/24 01:01:30 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,7 @@ BitcoinExchange	&BitcoinExchange::operator=(const BitcoinExchange &cpy)
 
 //---------------   Functions   ---------------//
 
-int	BitcoinExchange::loadDataBase()
-{
+int	BitcoinExchange::loadDataBase() {
 	std::ifstream	data("data.csv");
 
 	if (!data.is_open()) {
@@ -62,8 +61,7 @@ int	BitcoinExchange::loadDataBase()
 	return (0);
 }
 
-int		BitcoinExchange::isValidDate(std::string &date)
-{
+int		BitcoinExchange::isValidDate(std::string &date) {
 	int		year, month, day;
 	char	dash1, dash2;
 
@@ -78,8 +76,7 @@ int		BitcoinExchange::isValidDate(std::string &date)
 }
 
 
-float	BitcoinExchange::parseInputLine(std::string &input)
-{
+float	BitcoinExchange::parseInputLine(std::string &input) {
 	if (input.empty())
 		return (-1);
 	std::istringstream	iss(input);
@@ -107,8 +104,7 @@ float	BitcoinExchange::parseInputLine(std::string &input)
 	return (value);
 }
 
-void	BitcoinExchange::calculateRatio(std::ifstream &input)
-{
+void	BitcoinExchange::calculateRatio(std::ifstream &input) {
 	std::string line;
 	std::getline(input, line);
 	while(std::getline(input, line)) {
