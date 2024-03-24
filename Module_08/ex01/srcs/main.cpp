@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:09 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/23 04:40:04 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/24 07:23:19 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,7 +127,7 @@ int main()
 			for (unsigned int i = 1; i <= 100; i++)
 				vec.push_back(i);
 			sp.addNumbers(vec.begin(), vec.end());
-			std::cout << BLUE << "Span[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, ..., 100}" << WHITE << std::endl;
+			std::cout << BLUE << "Span[100] = {1, 2, 3, 4, 5, 6, 7, 8, 9, ..., 100}" << WHITE << std::endl;
 			std::cout << GREEN << "Shortest = " << sp.shortestSpan() << WHITE << std::endl;
 			std::cout << GREEN << "Longest  = " << sp.longestSpan() << WHITE << std::endl;
 		} catch (std::exception &e) {
@@ -137,7 +137,23 @@ int main()
 
 	{
 		try {
-			std::cout << YELLOW << "\nTest #009 - Subject Test" << WHITE << std::endl;
+			std::cout << YELLOW << "\nTest #009 - Add multiples numbers (10 000)" << WHITE << std::endl;
+			Span sp = Span(10000);
+			std::vector<int> vec;
+			for (unsigned int i = 1; i <= 10000; i++)
+				vec.push_back(i);
+			sp.addNumbers(vec.begin(), vec.end());
+			std::cout << BLUE << "Span[10000] = {1, 2, 3, 4, 5, 6, 7, 8, 9, ..., 10000}" << WHITE << std::endl;
+			std::cout << GREEN << "Shortest = " << sp.shortestSpan() << WHITE << std::endl;
+			std::cout << GREEN << "Longest  = " << sp.longestSpan() << WHITE << std::endl;
+		} catch (std::exception &e) {
+			std::cout << MAGENTA << e.what() << WHITE << std::endl;
+		}
+	}
+
+	{
+		try {
+			std::cout << YELLOW << "\nTest #010 - Subject Test" << WHITE << std::endl;
 			Span sp = Span(5);
 			sp.addNumber(6);
 			sp.addNumber(3);
