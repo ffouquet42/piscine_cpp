@@ -19,7 +19,10 @@
 #include <deque>
 #include <algorithm>
 #include <exception>
-#include <stdlib.h> 
+#include <cstdlib>
+#include <utility>
+#include <limits.h>
+#include <ctime>
 
 
 //---------------   class   ---------------//
@@ -31,8 +34,35 @@ class PmergeMe {
 		PmergeMe(const PmergeMe &cpy);	
 		PmergeMe	&operator=(const PmergeMe &cpy);
 		
+		void	arg_is_valid(int argc, char **argv);
+
+		void	start_ford_johson_vector(int argc, char **argv);
+		void	start_ford_johson_deque(int argc, char **argv);
+
+		void	print_time_vector(int argc);
+		void	print_time_deque(int argc);
+		void	print_before(int argc, char **argv);
+		void	print_after(void);
+
+		// template <typename T> void	__print_vector_element__(T &c); // debug
+
 	private:
-		
+		std::vector<std::pair<int, int> >		_vector;
+		std::deque<std::pair<int, int> >		_deque;
+		double									_duration_vector;
+		double									_duration_deque;
+
+		template <typename T> void	_fill_container(int argc, char **argv, T &c);
+		template <typename T> void	_sort_pair(T &a);
+		template <typename T> void	_merge_sort(T &c, int beg, int end);
+		template <typename T> void	_merge(T &a, int beg, int mid, int end);
+
+		std::vector<int>	_creat_vector_from_pair(void);
+		std::deque<int>		_creat_deque_from_pair(void);
+
+		template <typename T, typename G> void	_binary_insert_sort(T &c, G &second_c);
+		template <typename T> int				_binary_search(T &c, int value, int left, int right);
+		template <typename T> void				_insert(T &vector, int value, int index);
 };
 
 
