@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 15:28:09 by fllanet           #+#    #+#             */
-/*   Updated: 2024/03/24 02:09:36 by fllanet          ###   ########.fr       */
+/*   Updated: 2024/03/24 03:36:06 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ BitcoinExchange	&BitcoinExchange::operator=(const BitcoinExchange &cpy)
 
 //---------------   Functions   ---------------//
 
-int	BitcoinExchange::loadDatabase()
+int	BitcoinExchange::load_database()
 {
 	std::ifstream	data("data.csv");
 	if (!data.is_open())
@@ -65,7 +65,7 @@ int	BitcoinExchange::loadDatabase()
 	return (0);
 }
 
-int	BitcoinExchange::checkDateFormat(std::string &date)
+int	BitcoinExchange::check_date_format(std::string &date)
 {
 	int		year;
 	int		month;
@@ -90,7 +90,7 @@ int	BitcoinExchange::checkDateFormat(std::string &date)
     return (0);
 }
 
-float	BitcoinExchange::readInput(std::string &input)
+float	BitcoinExchange::read_input(std::string &input)
 {
 	if (input.empty())
 		return (-1);
@@ -103,7 +103,7 @@ float	BitcoinExchange::readInput(std::string &input)
 	date.erase(date.find_last_not_of(" \t") + 1);
 	input = date;
 	float value;
-	if (checkDateFormat(input))
+	if (check_date_format(input))
 	{
 		std::cout << "Error: bad input => " << input << std::endl;
 		return (-1);
@@ -124,7 +124,7 @@ float	BitcoinExchange::readInput(std::string &input)
 	return (value);
 }
 
-void	BitcoinExchange::calculBtcValue(std::ifstream &input)
+void	BitcoinExchange::calcul_btc_value(std::ifstream &input)
 {
 	std::string line;
 	std::getline(input, line);
@@ -132,7 +132,7 @@ void	BitcoinExchange::calculBtcValue(std::ifstream &input)
 	{
 		std::istringstream iss(line);
 		float value;
-		value = readInput(line);
+		value = read_input(line);
 		if (value == -1)
 			continue ;
 		std::map<std::string, float>::iterator it = _database.lower_bound(line);
