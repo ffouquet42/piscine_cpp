@@ -6,10 +6,10 @@
 *Module_03 - Version: 7*  
 *Module_04 - Version: 10*  
 *Module_05 - Version: 10.1*  
-*Module_06 - Version: -*  
-*Module_07 - Version: -*  
-*Module_08 - Version: -*  
-*Module_09 - Version: -*  
+*Module_06 - Version: 6.2*  
+*Module_07 - Version: 7*  
+*Module_08 - Version: 7*  
+*Module_09 - Version: 2*  
 
 ## Grade - 100/100
 
@@ -18,11 +18,11 @@ Module_01 : 100/100
 Module_02 : 100/100  
 Module_03 : 100/100  
 Module_04 : 100/100  
-Module_05 : -/100  
-Module_06 : -/100  
-Module_07 : -/100  
-Module_08 : -/100  
-Module_09 : -/100  
+Module_05 : 100/100  
+Module_06 : 100/100  
+Module_07 : 100/100  
+Module_08 : 100/100  
+Module_09 : 100/100  
 
 ## Description
 
