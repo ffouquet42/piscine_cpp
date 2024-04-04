@@ -30,34 +30,34 @@ These projects consist of a series of exercises to discover the CPP.
 
 ## Overview
 
-**Module_00 :  **
+**Module_00 :**  
 This first module of C++ is designed to help you understand the specifities of the language when compared to C. Time to dive into Object Oriented Programming!
 
-**Module_01 :  **
+**Module_01 :**  
 This module is designed to help you understand the memory allocation, reference, pointers to members and the usage of the switch in CPP.
 
-**Module_02 :  **
+**Module_02 :**  
 This module is designed to help you understand Ad-hoc polymorphism, overloads and orthodox canonical classes in CPP.
 
-**Module_03 :  **
+**Module_03 :**  
 This module is designed to help you understand Inheritance in CPP.
 
-**Module_04 :  **
+**Module_04 :**  
 This module is designed to help you understand Subtype polymorphism, abstract classes and interfaces in CPP.
 
-**Module_05 :  **
+**Module_05 :**  
 This module is designed to help you understand Try/Catch and Exceptions in CPP.
 
-**Module_06 :  **
+**Module_06 :**  
 This module is designed to help you understand the different casts in CPP.
 
-**Module_07 :  **
+**Module_07 :**  
 This module is designed to help you understand Templates in CPP.
 
-**Module_08 :  **
+**Module_08 :**  
 This module is designed to help you understand templated containers, iterators and algorithms in CPP.
 
-**Module_09 :  **
+**Module_09 :**  
 This module is designed to help you understand the containers in CPP.
 
 ## Testing
